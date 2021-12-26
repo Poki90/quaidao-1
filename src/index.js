@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import {DEFI_PROJECTS, MAIN_PAGE} from "config";
+import Home from "pages/Home";
+import DeFiProjects from "pages/DeFiProjects/DeFi-Projects";
+import DataContextProvider from "context/poolsContext";
+import Footer from "components/layouts/Footer";
 
+import "./styles/Main.scss";
+import "pure-react-carousel/dist/react-carousel.es.css";
+
+
+let rootElement = document.getElementById("root");
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    <DataContextProvider>
+        <Router>
+            <div>
+                <Route exact path={MAIN_PAGE} component={Home}/>
+                <Route path={DEFI_PROJECTS} component={DeFiProjects}/>
+            </div>
+            <Footer/>
+        </Router>
+    </DataContextProvider>, rootElement);

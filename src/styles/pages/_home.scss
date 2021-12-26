@@ -1,0 +1,904 @@
+.home {
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 100vh;
+
+  .top-section {
+    display: flex;
+    flex-direction: row;
+
+    &__left-part {
+      background-color: #0022A7;
+      width: 100%;
+      height: max-content;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 102px 0;
+
+      .info-section {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-top: 140px;
+
+        .we-are {
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 19.9375rem;
+
+          .primary {
+            font-family: Rubik, "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 4rem;
+            line-height: 87px;
+            color: #F4F7FD;
+          }
+
+          .secondary {
+            padding-top: 1.4375rem;
+            font-family: Rubik, "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 2.375rem;
+            line-height: 45px;
+            color: #F4F7FD;
+          }
+        }
+
+        .we-are-description {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding-bottom: 110px;
+
+          > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 6.75rem;
+
+            .number {
+              font-size: 3rem;
+            }
+
+            .primary {
+              font-family: Rubik, "Open Sans", sans-serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 28px;
+              color: #FFFFFF;
+            }
+
+            .secondary {
+              font-family: Rubik, "Open Sans", sans-serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 28px;
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+
+    &__right-part {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+
+      &__heading-button {
+        display: flex;
+        height: 106px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+  }
+
+  .second-section {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    .chip {
+      cursor: pointer;
+      width: 63.5%;
+      z-index: 2;
+      position: absolute;
+      right: 0;
+      top: -14px;
+    }
+
+    &__left-part {
+      width: 100%;
+      height: max-content;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 102px 0;
+
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-top: 140px;
+
+        .title {
+          height: auto;
+          width: 80%;
+          padding-bottom: 40px;
+        }
+
+        .text-block {
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 110px;
+          width: 70%;
+
+          .paragraphs {
+            padding: 30px 0;
+
+            p {
+              font-family: "Open Sans", Rubik, sans-serif;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 27px;
+
+              color: #000000;
+            }
+          }
+
+          .staking-button {
+            display: flex;
+            height: 106px;
+            align-items: center;
+          }
+        }
+
+
+      }
+    }
+
+    &__right-part {
+      background-color: #0022A7;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+
+      &__heading-button {
+        display: flex;
+        height: 106px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+  }
+
+  .explore-defi-nft {
+    width: 100%;
+    background: url("../../assets/images/dots-background.png") #F4F7FD no-repeat;
+    display: flex;
+    padding: 120px 0;
+    background-position-y: 200px;
+
+    .container {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      flex-direction: column;
+
+      .explore-defi-nft__title {
+        font-family: Rubik, "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3.5rem;
+        line-height: 4.125rem;
+        color: #005BBC;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 75px;
+      }
+
+      &__items {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+
+        &--item {
+
+        }
+
+        .defi-group {
+          width: 372px;
+          height: 438px;
+          left: 200px;
+          top: 2149px;
+
+          background: #F4F7FD;
+          box-shadow: -4px 8px 11px rgba(0, 0, 0, 0.43), inset 0px 5px 5px #FFFFFF;
+          border-radius: 6px;
+
+          &__header {
+            height: 60px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 15px;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 0;
+              border: 1px solid rgba(0, 34, 167, 0.26);
+            }
+          }
+
+          &__body {
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding: 25px;
+
+            .icon {
+              padding-bottom: 20px;
+            }
+
+            .text {
+              text-align: center;
+              font-family: Rubik, "Open Sans", sans-serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 1.375rem;
+              line-height: 1.625rem;
+              color: #000000;
+            }
+
+            .defi-group-button {
+              cursor: pointer;
+              width: 100%;
+              height: 52px;
+              border: 1px solid #005BBC;
+              box-sizing: border-box;
+              border-radius: 6px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: #F4F7FD;
+              margin-bottom: 20px;
+
+              p {
+                font-family: Rubik, "Open Sans", sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1.5rem;
+                line-height: 1.75rem;
+                color: #005BBC;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gateway-DeFi {
+    width: 100%;
+    background: url("../../assets/images/gateway-DeFi-background.png") #F4F7FD no-repeat;
+    display: flex;
+    height: 546px;
+    background-size: cover; /* Масштабируем фон */
+    z-index: 0;
+
+    .container {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      width: 60%;
+      max-width: 1200px;
+      flex-direction: column;
+      justify-content: center;
+
+      .gateway-DeFi__title {
+        font-family: Rubik, "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 5rem;
+        line-height: 5.9375rem;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 45px;
+      }
+
+      .gateway-DeFi__info {
+        background: rgba(3, 0, 38, 0.45);
+        border: 1px solid #0075FF;
+        box-sizing: border-box;
+        border-radius: 11px;
+        padding: 28px 94px;
+        margin-bottom: 50px;
+
+        &--primary {
+          font-family: Rubik, "Open Sans", sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 2.125rem;
+          line-height: 2.5rem;
+          text-align: center;
+
+          color: #FFFFFF;
+
+        }
+
+        &--secondary {
+
+          font-family: Open Sans, sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.25rem;
+          line-height: 1.6875rem;
+          text-align: center;
+
+          color: #FFFFFF;
+
+        }
+      }
+
+      .staking-button {
+        div {
+          button {
+            width: 294px;
+          }
+        }
+      }
+    }
+  }
+
+  .projects-section {
+    width: 100%;
+    background: #F4F7FD;
+    display: flex;
+    padding: 120px 0;
+
+    .container {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      flex-direction: column;
+
+      .projects-section__title {
+        font-family: Rubik, "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3.5rem;
+        line-height: 4.125rem;
+        color: #005BBC;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        padding-bottom: 75px;
+      }
+
+      &__items {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+
+        .projects-group {
+          width: 372px;
+          height: 490px;
+          background: #F4F7FD;
+          box-shadow: -4px 8px 11px rgba(0, 0, 0, 0.43), inset 0px 5px 5px #FFFFFF;
+          border-radius: 18px;
+          z-index: 2;
+          position: relative;
+
+          &__body {
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px;
+            text-align: center;
+            gap: 10px;
+
+            .icon {
+              padding-bottom: 10px;
+            }
+
+            .text {
+              text-align: center;
+              font-family: Rubik, "Open Sans", sans-serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 1.375rem;
+              line-height: 1.625rem;
+              color: #000000;
+
+            }
+
+            .secondary {
+              font-family: Open Sans, sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 25px;
+              text-align: center;
+              color: #000000;
+            }
+
+            .projects-group-button {
+              width: 100%;
+              height: 52px !important;
+              border: 1px solid #005BBC;
+              box-sizing: border-box;
+              border-radius: 6px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              background: #F4F7FD;
+
+              p {
+                font-family: Rubik, "Open Sans", sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1.5rem;
+                line-height: 1.75rem;
+                color: #005BBC;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .quai-farm {
+    min-height: 500px;
+
+    .container {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      flex-direction: column;
+
+      .quai-farm__primary {
+        font-family: Rubik, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 57px;
+        color: #005BBC;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding-bottom: 43px;
+        padding-top: 80px;
+      }
+
+      .quai-farm__secondary {
+        font-family: Rubik, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 43px;
+        color: #000000;
+        padding-bottom: 59px;
+      }
+
+      .quai-farm-grid {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: inherit;
+        grid-template-columns: repeat(auto-fill, minmax(90px, 90px));
+        grid-gap: 2rem;
+      }
+    }
+  }
+
+  .road-map {
+    width: 100%;
+    height: 552px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: url("../../assets/images/road-map-back.png") #F4F7FD no-repeat;
+    background-size: cover;
+
+    &__title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      font-family: Rubik, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 57px;
+      color: #FFFFFF;
+      padding-bottom: 70px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .container__list {
+        display: flex;
+        flex-direction: row;
+
+        .container__list--item {
+          position: relative;
+          z-index: 10;
+          width: 25%;
+          height: max-content;
+
+          &:after {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 0;
+            left: 84px;
+            z-index: -21;
+            top: 38px;
+            border: 4px solid #0075FF;
+          }
+
+          .li-title {
+            z-index: 1000;
+            width: 88px;
+            height: 88px;
+            border: 4px solid #0075FF;
+            border-radius: 50%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            p {
+              font-size: 31px;
+              color: #22DAF9;
+              font-weight: bold;
+            }
+          }
+
+          .li {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 30px;
+            flex-direction: row;
+            font-family: Open Sans, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            color: #FFFFFF;
+            margin-top: 26px;
+            padding-bottom: 26px;
+
+            span {
+              width: 65px;
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+
+  .team-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    &__title {
+      font-family: Rubik, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 3rem;
+      line-height: 3.5625rem;
+      color: #005BBC;
+      padding-top: 128px;
+      padding-bottom: 70px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+
+      .container__list {
+        max-width: 100%;
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 125px;
+        grid-template-columns: 210px 210px 210px 210px;
+
+        &--item {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column;
+          height: 400px;
+          text-align: center;
+          width: 210px;
+          gap: 10px;
+
+          .photo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            filter: grayscale(100%);
+            transition: 1s;
+            cursor: pointer;
+
+            &:hover {
+              filter: grayscale(0);
+            }
+          }
+
+          .fullName {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            font-family: Rubik, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 1.125rem;
+            line-height: 1.3125rem;
+            color: #0B0B0B;
+          }
+
+          .description {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            font-family: Open Sans, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.9375rem;
+            line-height: 1.3125rem;
+            color: #0B0B0B;
+          }
+        }
+      }
+    }
+  }
+
+  .partners-section {
+    padding-bottom: 140px;
+
+    &__title {
+      font-family: Rubik, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 3rem;
+      line-height: 3.5625rem;
+      color: #005BBC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      height: 370px;
+      margin: 0 auto;
+
+      .container__list {
+        max-width: 100%;
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 125px;
+        grid-template-columns: 210px 210px 210px 210px;
+        gap: 20px;
+
+        &--item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          height: 132px;
+          border: 1px solid #005BBC;
+          box-sizing: border-box;
+          border-radius: 18px;
+
+          .photo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            background-size: cover;
+          }
+        }
+      }
+
+      .options {
+        padding-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 80px;
+
+        button {
+          display: flex;
+          background-color: transparent;
+          border: none;
+        }
+
+        button:disabled {
+          background: none !important;
+        }
+      }
+    }
+  }
+
+  .last-section {
+    height: 263px;
+    background: url("../../assets/images/last-section-bg.png") #F4F7FD no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+
+    &__title {
+      width: 100%;
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 42px;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .submit-form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+
+        .input {
+          background: #F2F2F3;
+          border: 1px solid #FFFFFF;
+          box-sizing: border-box;
+          border-radius: 8px;
+          min-width: 431px;
+          height: 58px;
+
+          font-family: Roboto, sans-serif;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 28px;
+          padding: 10px;
+          color: #000000;
+
+          &::placeholder {
+            color: #000000;
+          }
+        }
+
+        .button {
+          background: #F4F7FD;
+          border-radius: 6px;
+          font-family: Rubik, sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 28px;
+          color: #0022A7;
+          height: 58px;
+          padding: 0 50px;
+        }
+      }
+    }
+  }
+}
+
+//.container {
+//  display: flex;
+//  margin: 0 auto;
+//  flex-direction: column;
+//
+//  .items-container {
+//    flex-grow: 1;
+//    display: flex;
+//    flex-wrap: wrap;
+//    justify-content: space-between;
+//    overflow: auto;
+//
+//    .items-container__item {
+//      margin: 20px 0;
+//      max-width: 240px;
+//      background-position: center;
+//      flex: 0 0 1;
+//      font-family: Proxima Nova, sans-serif;
+//      font-style: normal;
+//      font-weight: 300;
+//      font-size: 24px;
+//      line-height: 140%;
+//      flex: none;
+//      order: 1;
+//      flex-grow: 0;
+//      color: #FFFFFF;
+//      @media (max-width: 480px) {
+//        flex: 0 0 50%;
+//        font-size: 18px;
+//      }
+//    }
+//  }
+//
+//
+//}

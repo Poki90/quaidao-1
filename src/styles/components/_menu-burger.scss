@@ -1,0 +1,148 @@
+#page-wrap {
+  text-align: center;
+  overflow: auto;
+}
+
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+  transition: color 0.2s;
+}
+
+.bm-item:hover {
+  color: white;
+}
+
+.bm-burger-button {
+  position: absolute;
+  width: 18px;
+  height: 20px;
+  right: 18px;
+  top: 25px;
+  @media (min-width: 600px) {
+    display: none;
+  }
+
+  .bm-burger-bars {
+    height: 10% !important;
+    @media (min-width: 600px) {
+      width: 50% !important;
+    }
+  }
+
+  .bm-burger-bars:first-of-type {
+    width: 50%;
+    margin-left: 50%;
+  }
+}
+
+.bm-burger-bars {
+  background: #FFFFFF;
+}
+
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu {
+  background: #212121;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-item-list {
+  color: #FFFFFF;
+  margin-left: auto;
+  text-align: end;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.bm-menu-wrap {
+  width: 100% !important;
+  z-index: 1100;
+  right: 0 !important;
+  left: initial !important;
+  height: 100%;
+}
+
+.menu-item {
+  position: relative;
+  margin-top: 50px;
+  padding-right: 45px;
+  margin-right: 40px;
+  text-transform: uppercase;
+
+  .title {
+    font-family: Proxima Nova, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 34px;
+    text-align: right;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    position: relative !important;
+  }
+
+  .after {
+    font-family: Neue Machina, sans-serif;
+    position: absolute !important;
+    top: -7px !important;
+    right: 0 !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #FFFFFF;
+    opacity: 0.6;
+  }
+
+}
+
+.bm-cross-button {
+  display: none;
+}
+
+.header-sidebar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-direction: row !important;
+
+  .logo {
+    div {
+      div {
+        svg {
+          width: 155px;
+          height: 25px;
+        }
+      }
+    }
+  }
+
+  .close-sidebar {
+    width: 50px;
+    height: 50px;
+
+  }
+}

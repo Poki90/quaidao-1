@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html {
+  font-family: Halvar Breitschrift, sans-serif;
+}
+li {
+  list-style-type: none;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+a {
+  &:link {
+    text-decoration: none;
+  }
+
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.white {
+  color: $white;
+}
+
+.gray {
+  color: $color-gray;
+}
