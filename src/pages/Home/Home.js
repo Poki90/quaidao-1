@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Sidebar from '../../components/Sidebar';
 
 import TopSection from "pages/Home/components/TopSection";
@@ -11,22 +11,29 @@ import RoadMap from "pages/Home/components/RoadMap";
 import TeamSection from "pages/Home/components/TeamSection";
 import PartnersSection from "pages/Home/components/PartnersSection";
 import LastSection from "pages/Home/components/LastSection";
+import {useModal} from "hooks";
+import StartModal from "pages/Home/components/StartModal";
 
-const Home = () => (
-    <div className="home" id="home">
-        <Sidebar pageWrapId="root" outerContainerId="root"/>
-        <TopSection/>
-        <SecondSection/>
-        <ExploreDefiNft/>
-        <GatewayDeFi/>
-        <ProjectsSection/>
-        <QuaiFarm/>
-        <RoadMap/>
-        <TeamSection/>
-        <PartnersSection/>
-        <LastSection/>
-    </div>
-);
+const Home = () => {
+    const {isShowing: isStartModalShow, toggle: toggleStartModalShow} =
+        useModal();
+    return (
+        <div className="home" id="home">
+            <StartModal isShowing={isStartModalShow} toggle={toggleStartModalShow}/>
+            <Sidebar pageWrapId="root" outerContainerId="root"/>
+            <TopSection openModal={toggleStartModalShow}/>
+            <SecondSection openModal={toggleStartModalShow}/>
+            <ExploreDefiNft/>
+            <GatewayDeFi/>
+            <ProjectsSection/>
+            <QuaiFarm/>
+            <RoadMap/>
+            <TeamSection/>
+            <PartnersSection/>
+            <LastSection/>
+        </div>
+    );
+}
 
 export default Home;
 

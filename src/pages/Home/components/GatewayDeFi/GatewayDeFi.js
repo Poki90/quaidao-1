@@ -6,6 +6,7 @@ const GatewayDeFi = () => (
         <div className='container'>
             <div className='gateway-DeFi__title'>
                 Gateway for DeFi
+
             </div>
             <div className='gateway-DeFi__info'>
                 <div className='gateway-DeFi__info--primary'>Transfer any token between any blockchain</div>

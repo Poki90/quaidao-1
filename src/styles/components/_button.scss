@@ -1,84 +1,232 @@
-
-.btn {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  white-space: pre-wrap;
-  height: 52px;
-  border-radius: 6px;
-  font-size: 1.8rem;
-  border: currentColor 1px solid;
-  padding: 0 2rem;
-  box-sizing: border-box;
-  cursor: pointer;
-  font-family: Rubik, "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 28px;
+.ui-button-wrap {
   position: relative;
 
-  p {
-    font-size: 1.5rem;
-    position: relative;
-    font-family: Neue Machina, sans-serif;
-  }
-
-  @media (max-width: 600px) {
-    min-height: auto;
-    font-size: 12px !important;
-  }
-
-  &.black {
-    color: white;
-    min-width: 187px;
-    background: $black;
-  }
-
-  &.white {
-    min-width: 187px;
-    color: #0022A7;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  .back-primary {
+    position: absolute;
+    z-index: -1;
+    bottom: -10px;
+    width: 80%;
+    height: 36px;
+    background: #C4D2FF;
     border-radius: 6px;
   }
 
-  &.gradient {
-    color: white;
-    background: linear-gradient(97.53deg, #360f8c -22.91%, #15d378 138.45%);
-    border: 1px solid $black;
-  }
+  &:hover {
+    .back-primary {
+      position: absolute;
+      z-index: -1;
+      bottom: 0px;
+      width: 80%;
+      height: 36px;
+      background: #C4D2FF;
+      border-radius: 6px;
 
-  &.secondary {
-    background-color: $color-blue;
-  }
+      button::before {
+        content: '';
+        border-radius: 1000px;
+        min-width: calc(300px + 12px);
+        min-height: calc(60px + 12px);
+        border: 6px solid #00FFCB;
+        box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all .3s ease-in-out 0s;
+      }
 
-  &.primary {
-    color: #FFFFFF;
-    background: #0022A7;
+      &:hover, &:focus {
+        color: #313133;
+        transform: translateY(6px);
+      }
+
+      button:hover::before, button:focus::before {
+        opacity: 0;
+      }
+
+      button::after {
+        content: '';
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+        border: 6px solid #00FFCB;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: ring 1.5s infinite;
+      }
+
+      &:hover::after, &:focus::after {
+        animation: none;
+        display: none;
+      }
+
+      @keyframes ring {
+        0% {
+          width: 30px;
+          height: 30px;
+          bottom: 100px;
+          opacity: 1;
+        }
+        100% {
+          width: 300px;
+          height: 300px;
+          bottom: 0;
+          opacity: 0;
+        }
+      }
+    }
 
     p {
-      @media (max-width: 600px) {
-        font-size: 12px !important;
-      }
+      color: #4A38AE !important;
+      z-index: 2;
     }
   }
 
-  &.green {
-    background-color: $green;
-    color: #FFFFFF;
-  }
-
-  &.outline {
-    border: 1px solid $color-blue;
+  .btn {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    white-space: pre-wrap;
+    height: 52px;
+    border-radius: 6px;
+    font-size: 1.8rem;
+    border: currentColor 1px solid;
+    padding: 0 2rem;
     box-sizing: border-box;
-    border-radius: 12px;
-    background-color: $white !important;
-    color: $color-gray;
+    cursor: pointer;
+    font-family: Rubik, "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 28px;
+    position: relative;
+    transition: all 0.5s;
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transition: all 0.3s;
+
+      p {
+        color: #4A38AE !important;
+      }
+    }
+
+    &:hover::before {
+      opacity: 0;
+      transform: scale(0.5, 0.5);
+
+      p {
+        color: #4A38AE !important;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 102%;
+      height: 102%;
+      z-index: 1;
+      opacity: 0;
+      transition: all 0.3s;
+      background-color: #C4D2FF;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transform: scale(1.2, 1.2);
+
+      p {
+        color: #4A38AE !important;
+      }
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: scale(1, 1);
+
+      p {
+        color: #4A38AE !important;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      position: relative;
+      font-family: Neue Machina, sans-serif;
+    }
+
+    @media (max-width: 600px) {
+      min-height: auto;
+      font-size: 12px !important;
+    }
+
+    &.black {
+      color: white;
+      min-width: 187px;
+      background: $black;
+    }
+
+    &.white {
+      min-width: 187px;
+      color: #0022A7;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+    }
+
+    &.gradient {
+      color: white;
+      background: linear-gradient(97.53deg, #360f8c -22.91%, #15d378 138.45%);
+    }
+
+    &.secondary {
+      background-color: $color-blue;
+    }
+
+    &.primary {
+      background: #0022A7;
+      color: white;
+
+      p {
+        @media (max-width: 600px) {
+          font-size: 12px !important;
+        }
+      }
+    }
+
+    &.green {
+      background-color: $green;
+      color: #FFFFFF;
+    }
+
+    &.outline {
+      border: 1px solid $color-blue;
+      box-sizing: border-box;
+      border-radius: 12px;
+      background-color: $white !important;
+      color: $color-gray;
+    }
   }
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+  border-color: transparent;
 }
 
 button[disabled=disabled], button:disabled {
@@ -92,12 +240,3 @@ button[disabled=disabled], button:disabled {
   }
 }
 
-.back-primary {
-  position: absolute;
-  z-index: -1;
-  bottom: -10px;
-  width: 80%;
-  height: 36px;
-  background: #C4D2FF;
-  border-radius: 6px;
-}
