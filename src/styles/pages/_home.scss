@@ -299,14 +299,37 @@
               justify-content: center;
               background: #F4F7FD;
               margin-bottom: 20px;
+              transition: all .35s;
+              position: relative;
+              color: #005BBC;
+
+              &:after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: #0022A7;
+                transition: all .35s;
+              }
+
+              &:hover {
+                color: #fff;
+              }
+
+              &:hover::after {
+                width: 100%;
+              }
 
               p {
+                position: relative;
+                z-index: 2;
                 font-family: Rubik, "Open Sans", sans-serif;
                 font-style: normal;
                 font-weight: bold;
                 font-size: 1.5rem;
                 line-height: 1.75rem;
-                color: #005BBC;
               }
             }
           }

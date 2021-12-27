@@ -6,7 +6,7 @@ import uiDaoSecondSection from "assets/svg/home/ui-dao-second-section.svg";
 import UiButton from "components/UiButton";
 import chipSvg from "assets/svg/home/chip.svg";
 
-const SecondSection = (props) => (
+const SecondSection = ({openModal}) => (
     <div className="second-section">
         <RenderResponsiveBlocks
             leftChildren={<div className="second-section__left-part">
@@ -30,7 +30,7 @@ const SecondSection = (props) => (
                                 qui officia deserunt mollit anim id est laborum.</p>
                         </div>
                         <div className="staking-button">
-                            <UiButton priority='primary' type='button'><p>Cohort farming</p>
+                            <UiButton priority='primary' type='button' onclick={openModal}><p>Cohort farming</p>
                             </UiButton>
                         </div>
                     </div>

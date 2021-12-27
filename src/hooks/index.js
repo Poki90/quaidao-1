@@ -6,6 +6,7 @@ import useTimeout from './useTimeout';
 import useModal from './useModal';
 import useCopyToClipboard from './useCopyToClipboard';
 import useHover from './useHover';
+import useAnimation from './use-animation';
 
 export {
   useHover,
@@ -13,6 +14,7 @@ export {
   useMobileDetect,
   useMedia,
   useAsync,
+    useAnimation,
   useTimeout,
   useModal,
   useCopyToClipboard,

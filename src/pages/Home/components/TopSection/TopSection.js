@@ -3,7 +3,7 @@ import RenderResponsiveBlocks from "components/RenderResponsiveBlocks";
 import Header from "components/layouts/Header";
 import UiButton from "components/UiButton";
 
-const TopSection = () => (
+const TopSection = ({openModal}) => (
     <div className="top-section">
         <RenderResponsiveBlocks
             leftChildren={<div className="top-section__left-part">
@@ -33,7 +33,7 @@ const TopSection = () => (
             rightChildren={
                 <div className="top-section__right-part">
                     <div className="top-section__right-part__heading-button">
-                        <UiButton priority='primary' type='button'><p>Stacking</p>
+                        <UiButton priority='primary' type='button' onclick={openModal}><p>Stacking</p>
                         </UiButton>
 
                     </div>
