@@ -30,7 +30,10 @@ const exploreDefiNFTs = [
 ]
 
 const ExploreDefiNft = () => (
-    <div className='explore-defi-nft'>
+    <div className='explore-defi-nft' data-aos="fade-left"
+         data-aos-anchor="#example-anchor"
+         data-aos-offset="500"
+         data-aos-duration="500">
         <div className='container'>
             <div className='explore-defi-nft__title'>
                 Explore the DeFi NFT Ecosystem

@@ -13,7 +13,7 @@ const TopSection = ({openModal}) => {
                 leftChildren={<div className="top-section__left-part">
                     <Header/>
                     {!isDesktop && <div className="staking-button" style={{zIndex: 0}}>
-                        <UiButton priority='white' type='button'><p>Cohort farming</p>
+                        <UiButton priority='white' type='button' onclick={openModal}><p>Cohort farming</p>
                         </UiButton>
                     </div>}
                     <div className="info-section">

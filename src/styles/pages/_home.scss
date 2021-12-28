@@ -14,7 +14,6 @@
     display: flex;
     flex-direction: row;
 
-
     &__left-part {
       background-color: transparent;
       width: 100%;
@@ -191,8 +190,10 @@
           display: flex;
           flex-direction: column;
           padding-bottom: 110px;
+          padding-left: 60px;
           width: 70%;
           @media (max-width: 600px) {
+            padding-left: 0;
             width: 100%;
           }
 
@@ -213,7 +214,6 @@
           .staking-button {
             @media (max-width: 600px) {
               display: flex;
-              width: 100%;
               align-items: center;
               justify-content: center;
             }
@@ -273,7 +273,9 @@
     display: flex;
     padding: 120px 0;
     background-position-y: 200px;
+    height: 100vh;
     @media (max-width: 800px) {
+      height: auto;
       padding: 20px 0;
 
     }
@@ -312,6 +314,7 @@
         align-items: center;
         justify-content: space-between;
         flex-direction: row;
+        gap: 50px;
         @media (max-width: 800px) {
           flex-direction: column;
           gap: 50px;
@@ -554,6 +557,7 @@
       }
 
       .staking-button {
+        padding-top: 50px;
         @media (max-width: 600px) {
           margin-top: -120px;
           transform: scale(0.8);
@@ -594,8 +598,13 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        text-align: center;
+        text-align: left;
+        width: 100%;
         padding-bottom: 75px;
+        @media (max-width: 600px) {
+          justify-content: center;
+          text-align: center;
+        }
       }
 
       &__items {
@@ -667,7 +676,7 @@
 
               .projects-group-button {
                 width: 100%;
-                height: 52px !important;
+                min-height: 52px !important;
                 border: 1px solid #005BBC;
                 box-sizing: border-box;
                 border-radius: 6px;
@@ -741,6 +750,7 @@
         width: inherit;
         grid-template-columns: repeat(auto-fill, minmax(90px, 90px));
         grid-gap: 1rem;
+        overflow: hidden;
 
         > div {
           max-width: 90px;
@@ -882,9 +892,9 @@
 
           .li {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: flex-start;
-            height: 58px;
+            height: auto;
             flex-direction: row;
             font-family: Open Sans, sans-serif;
             font-style: normal;
@@ -893,10 +903,18 @@
             line-height: 25px;
             color: #FFFFFF;
             margin-top: 26px;
-            padding-bottom: 26px;
+            padding-right: 25px;
+            margin-left: 40px;
+            position: relative;
 
-            span {
-              width: 65px;
+            &__icon {
+              position: absolute;
+              top: -33px;
+              left: -60px;
+
+              span {
+                width: 65px;
+              }
             }
           }
         }

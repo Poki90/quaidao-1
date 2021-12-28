@@ -21,7 +21,7 @@ const RoadMap = () => (
                                 <p>Q{index + 1}</p>
                             </div>
                             <div>
-                                {item.ul.map(li => <div key={li} className='li'><ReactSVG src={li !== '' ? fireDotIcon : <svg></svg>}
+                                {item.ul.map(li => <div key={li} className='li'><ReactSVG className='li__icon' src={li !== '' ? fireDotIcon : <svg></svg>}
                                                                                  wrapper='span'/> {li}</div>)}
                             </div>
                         </div>

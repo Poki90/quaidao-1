@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import RenderResponsiveBlocks from "components/RenderResponsiveBlocks";
 import {ReactSVG} from "react-svg";
 import uiDaoTitleSecondSection from "assets/svg/home/ui-dao-title-second-section.svg";
@@ -6,7 +6,7 @@ import uiDaoSecondSection from "assets/svg/home/ui-dao-second-section.svg";
 import UiButton from "components/UiButton";
 import chipSvg from "assets/svg/home/chip.svg";
 
-const SecondSection = ({openModal}) => (
+const SecondSection = ({openModal, startAnimation}) => (
     <div className="second-section">
         <RenderResponsiveBlocks
             leftChildren={<div className="second-section__left-part">
@@ -24,12 +24,13 @@ const SecondSection = ({openModal}) => (
                                 aliquip ex
                                 ea commodo consequat.</p>
                             <br/>
+                            <br/>
                             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                                 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
                                 culpa
                                 qui officia deserunt mollit anim id est laborum.</p>
                         </div>
-                        <div className="staking-button">
+                        <div className="staking-button" style={{zIndex: 0}}>
                             <UiButton priority='primary' type='button' onclick={openModal}><p>Cohort farming</p>
                             </UiButton>
                         </div>
@@ -38,7 +39,9 @@ const SecondSection = ({openModal}) => (
             </div>}
             rightChildren={
                 <div className="second-section__right-part">
-                    <div className='chip'><ReactSVG src={chipSvg} wrapper='div'/></div>
+                    <div className='chip'><ReactSVG src={chipSvg}
+                                                    wrapper='div'/>
+                    </div>
                     <div className="top-section__right-part__heading-button"/>
                 </div>
             }/>

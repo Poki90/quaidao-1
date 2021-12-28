@@ -59,7 +59,9 @@ const QuaiFarm = () => (
         <div className="container">
             <div className='quai-farm__primary'><p>QUAI Cohort Farm</p></div>
             <div className='quai-farm__secondary'><p>Farming Rates by Token</p></div>
-            <div className="quai-farm-grid">
+            <div className="quai-farm-grid" data-aos="fade-right"
+                 data-aos-offset="300"
+                 data-aos-easing="ease-in-sine">
                 {icons.map(({icon, key}) => (<div key={key}><ReactSVG src={icon} wrapper='span'/></div>))}
             </div>
         </div>

@@ -9,10 +9,6 @@
   }
 }
 
-.swirl-in-fwd {
-  animation: swirl-in-fwd 0.6s ease-out both;
-}
-
 @keyframes swirl-out-bck {
   0% {
     transform: rotate(0) scale(1);

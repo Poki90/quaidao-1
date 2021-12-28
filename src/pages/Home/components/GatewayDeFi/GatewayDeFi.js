@@ -283,7 +283,7 @@ const GatewayDeFi = () => {
                     </div>
                 </div>
                 <div className="staking-button" style={{zIndex: 0}}>
-                    <UiButton priority='white' type='button'><p>Explore</p>
+                    <UiButton priority='white' type='button' ><p>Explore</p>
                     </UiButton>
                 </div>
             </div>

@@ -8,7 +8,7 @@ import ambLogo from '../../assets/svg/header-logo.svg';
 import UiButton from "components/UiButton";
 import close from 'assets/svg/close.svg'
 
-const Sidebar = () => {
+const Sidebar = ({openModal}) => {
     const [open, setOpen] = useState(false);
 
     const handleOnOpen = () => {
@@ -40,7 +40,7 @@ const Sidebar = () => {
                     </div>
                 </div>
                 <div className="staking-button" style={{zIndex: 0}}>
-                    <UiButton priority='white' type='button'><p>Cohort farming</p>
+                    <UiButton priority='white' type='button' onclick={openModal}><p>Cohort farming</p>
                     </UiButton>
                 </div>
             </div>
