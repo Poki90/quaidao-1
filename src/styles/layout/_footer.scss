@@ -26,8 +26,11 @@
     font-size: 1.375rem;
     line-height: 1.875rem;
     color: #0A0A0A;
-
-    .footer-menu__item {
+    @media (max-width: 600px) {
+      flex-direction: column;
+      padding-top: 20px;
+    }
+      .footer-menu__item {
       cursor: pointer;
       color: #0A0A0A;
     }
@@ -108,7 +111,9 @@
 
   .socials {
     text-align: center;
-
+    @media (max-width: 600px) {
+      padding-top: 20px;
+    }
     &__list {
       &__link {
         display: inline-block;

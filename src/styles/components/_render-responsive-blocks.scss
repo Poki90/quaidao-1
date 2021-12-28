@@ -20,4 +20,14 @@
     align-items: center;
     justify-content: center;
   }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    .left {
+      width: 100%;
+    }
+    .right {
+      width: 100%;
+    }
+  }
 }

@@ -5,16 +5,18 @@ import logo from "assets/svg/home/startModal/logo.svg";
 import modBut1 from "assets/svg/home/startModal/modal-button-1.svg";
 import modBut2 from "assets/svg/home/startModal/modal-button-2.svg";
 import modBut3 from "assets/svg/home/startModal/modal-button-3.svg";
+import {useMedia} from "hooks";
 
 const StartModal = ({isShowing,
                         toggle}) => {
+    const isSmall = useMedia('(max-width: 800px)');
     return (
         <Modal
             isShowing={isShowing}
-            hide={toggle}
+            hide={() => toggle()}
             className='starting-modal-lighting'
             modalStyles={{
-                maxWidth: '70%', minHeight: '80%', overflow: 'hidden',
+                maxWidth: isSmall ? '90%' : '70%', minHeight:isSmall ? '90%' : '80%', overflow: 'hidden',
                 border: "2px solid #005BBC",
                 boxSizing: 'border-box',
                 boxShadow: '0px 0px 20px #000AFF',

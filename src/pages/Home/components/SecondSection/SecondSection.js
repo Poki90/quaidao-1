@@ -34,11 +34,11 @@ const SecondSection = ({openModal}) => (
                             </UiButton>
                         </div>
                     </div>
-                    <div className='chip'><ReactSVG src={chipSvg} wrapper='div'/></div>
                 </div>
             </div>}
             rightChildren={
                 <div className="second-section__right-part">
+                    <div className='chip'><ReactSVG src={chipSvg} wrapper='div'/></div>
                     <div className="top-section__right-part__heading-button"/>
                 </div>
             }/>

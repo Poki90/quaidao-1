@@ -77,16 +77,21 @@
   top: 0;
   bottom: 0;
   background: #F4F7FD;
+  @media(max-width: 600px) {
+    flex-direction: column;
+  }
 
   &__info {
     padding: 25px;
     background: url("../../assets/svg/home/startModal/modal-back.png") #F4F7FD no-repeat;
     background-size: cover;
     overflow-y: scroll;
+    @media(max-width: 600px) {
+      overflow-y: inherit;
+    }
 
     .logo {
       padding-bottom: 34px;
-
     }
 
     .primary {
@@ -97,6 +102,10 @@
       line-height: 143%;
       color: #F4F7FD;
       padding-bottom: 14px;
+      @media(max-width: 600px) {
+        font-size: 18px;
+        line-height: 143%;
+      }
     }
 
     .secondary {
@@ -106,6 +115,10 @@
       font-size: 20px;
       line-height: 140.5%;
       color: #FFFFFF;
+      @media(max-width: 600px) {
+        font-size: 16px;
+        line-height: 140.5%;
+      }
     }
   }
 
@@ -117,8 +130,12 @@
     justify-content: center;
     flex-direction: column;
     gap: 48px;
-
+    padding: 15px;
+    @media(max-width: 600px) {
+      margin-top: 30px;
+    }
     .item-border {
+
       height: 107px;
       width: 80%;
       border: 1px solid #005BBC;
@@ -127,6 +144,10 @@
 
       min-width: 308px;
       position: relative;
+      @media(max-width: 600px) {
+       transform: scale(0.7);
+        margin-top: -60px;
+      }
 
       .item {
         cursor: pointer;

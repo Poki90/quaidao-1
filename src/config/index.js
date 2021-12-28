@@ -15,32 +15,32 @@ export const ENABLE_DEBUG_LOG = false;
 
 export const socialsLinks = [
   {
-    url: 'dasdsafs',
+    url: 'dadsasdsafs',
     title: 'Github',
     icon: Github,
   },
   {
-    url: 'dasdsafs',
+    url: 'dasdsgsaafs',
     title: 'LinkedIn',
     icon: LinkedIn,
   },
   {
-    url: 'dasdsafs',
+    url: 'dassaghdsafs',
     title: 'Telegram',
     icon: Telegram,
   },
   {
-    url: 'dasdsafs',
+    url: 'dashsddsafs',
     title: 'Medium',
     icon: Medium,
   },
   {
-    url: 'dasdsafs',
+    url: 'dasdhsdsafs',
     title: 'Twitter',
     icon: Twitter,
   },
   {
-    url: 'dasdsafs',
+    url: 'dasdssadafs',
     title: 'Twitter',
     icon: Discord,
   },

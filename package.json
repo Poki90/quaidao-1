@@ -17,6 +17,7 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.0",
+    "react-spring": "^9.3.3",
     "react-svg": "^14.0.10",
     "sass": "^1.35.2",
     "web-vitals": "^2.1.2"
@@ -40,6 +41,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "serve": "react-scripts build && serve -s build",
     "stylelint": "stylelint src/**/*.scss",
     "stylelint:fix": "stylelint src/**/*.scss --fix"
   },

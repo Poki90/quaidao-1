@@ -6,19 +6,19 @@ const projectsSection = [
     {
         icon: projectssectionIcon,
         text: 'MeDIA eYe NFT Portal',
-        textSecondary: 'The NFT Creator Portal is designed to support marketers, artists, businesses, and other organizations wanting to merchandise, promote, and advertise their products.',
+        textSecondary: 'The aNFT Creator Portal is designed to support marketers, artists, businesses, and other organizations wanting to merchandise, promote, and advertise their products.',
         buttonText: 'Explore',
     },
     {
         icon: projectssectionIcon,
         text: 'MeDIA eYe NFT Portal',
-        textSecondary: 'The NFT Creator Portal is designed to support marketers, artists, businesses, and other organizations wanting to merchandise, promote, and advertise their products.',
+        textSecondary: 'The fNFT Creator Portal is designed to support marketers, artists, businesses, and other organizations wanting to merchandise, promote, and advertise their products.',
         buttonText: 'Explore',
     },
     {
         icon: projectssectionIcon,
         text: 'MeDIA eYe NFT Portal',
-        textSecondary: 'The NFT Creator Portal is designed to support marketers, artists, businesses, and other organizations wanting to merchandise, promote, and advertise their products.',
+        textSecondary: 'Thse NFT Creator Portal is designed to support marketers, artists, businesses, and other organizations wanting to merchandise, promote, and advertise their products.',
         buttonText: 'Explore',
     },
 ]
@@ -33,8 +33,8 @@ const ProjectsSection = () => (
             <div className='container__items' style={{zIndex: 1}}>
                 {
                     projectsSection.map(item => (
-                        <div key={item.buttonText} style={{zIndex: 1, position: 'relative'}}>
-                            <div className='container__items--item projects-group' style={{zIndex: 1}}>
+                        <div key={item.textSecondary} className="container__items--item-wrapper">
+                            <div className='container__items--item-wrapper--item projects-group' style={{zIndex: 1}}>
                                 <div className='border-outline' style={{zIndex: 1}}/>
                                 <div className='projects-group__body'>
                                     <div className='icon'><ReactSVG src={item.icon} wrapper='span'/></div>

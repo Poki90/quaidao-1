@@ -37,9 +37,9 @@ const ExploreDefiNft = () => (
             </div>
             <div className='container__items'>
                 {
-                    exploreDefiNFTs.map(item => (
-                        <div key={item.buttonText}>
-                            <div className='container__items--item defi-group'>
+                    exploreDefiNFTs.map((item, index) => (
+                        <div key={index}>
+                            <div className='defi-group'>
                                 <div className='defi-group__header'><ReactSVG src={item.headerIcon}
                                                                               wrapper='span'/>
                                 </div>
@@ -47,6 +47,7 @@ const ExploreDefiNft = () => (
                                     <div className='icon'><ReactSVG src={item.icon} wrapper='span'/></div>
                                     <div className='text'><p>{item.text}</p></div>
                                     <button className='defi-group-button'><p>{item.buttonText}</p></button>
+                                    <span className="down-elem"/>
                                 </div>
                             </div>
                         </div>

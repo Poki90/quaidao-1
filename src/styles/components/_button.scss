@@ -149,10 +149,9 @@
       border: 1px solid rgba(255, 255, 255, 0.5);
       transform: scale(1.2, 1.2);
 
-      p {
+                     p {
         color: #4A38AE !important;
-      }
-    }
+      }                  }
 
     &:hover::after {
       opacity: 1;
