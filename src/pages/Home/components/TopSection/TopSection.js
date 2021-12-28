@@ -12,14 +12,14 @@ const TopSection = ({openModal}) => {
             <RenderResponsiveBlocks
                 leftChildren={<div className="top-section__left-part">
                     <Header/>
-                    {!isDesktop && <div className="staking-button" style={{zIndex: 0}}>
+                    {!isDesktop && <div className="staking-button" style={{zIndex: 0,paddingTop:40}}>
                         <UiButton priority='white' type='button' onclick={openModal}><p>Cohort farming</p>
                         </UiButton>
                     </div>}
                     <div className="info-section">
                         <div className="we-are">
                             <p className="primary">QUAI DAO</p>
-                            <p className="secondary"><span style={{fontWeight: 400}}>DEFI</span> <span
+                            <p className="secondary"><span style={{fontWeight: 400}}>DEFI</span> <span className='ACCELERATOR'
                                 style={{fontWeight: 700}}>ACCELERATOR</span></p>
                         </div>
                         {
@@ -29,7 +29,7 @@ const TopSection = ({openModal}) => {
                                     <p className='secondary'><span className='number'>6</span></p>
                                 </div>
                                 <div>
-                                    <p className='primary'>Staking Rate APYs</p>
+                                    <p className='primary'>Staking Rate APY</p>
                                     <p className='secondary'>up to <span className='number'>480%</span></p>
                                 </div>
                                 <div>
@@ -44,9 +44,8 @@ const TopSection = ({openModal}) => {
                     <div className="top-section__right-part">
                         <img className='top-eclipse' src={topImage} alt='top logo'/>
                         <div className="top-section__right-part__heading-button">
-                            {isDesktop && <UiButton priority='primary' type='button' onclick={openModal}><p>Cohort farming</p>
+                            {isDesktop && <UiButton  priority='primary' type='button' onclick={openModal}><p>Cohort farming</p>
                             </UiButton>}
-
                         </div>
                         <div style={{height: 400, display: "flex", alignItems: 'center', justifyContent: 'center'}}>
                         </div>

@@ -12,17 +12,19 @@ import partner1922 from "assets/images/partners/image 1922.png";
 import partner1923 from "assets/images/partners/image 1923.png";
 import partner1925 from "assets/images/partners/image 1925.png";
 import partner1926 from "assets/images/partners/image 1926.png";
+import partner125248 from "assets/images/partners/Group 125248.png";
 import partner1927 from "assets/images/partners/image 1927.png";
 import partner1928 from "assets/images/partners/image 1928.png";
 import {useMedia} from "hooks";
 
 const partnersMob1 = [
     {
-        photo: partner123653,
+        photo: partner1922,
     },
     {
-        photo: partner125986,
+        photo: partner1923,
     },
+
     {
         photo: partner1917,
     },
@@ -32,10 +34,10 @@ const partnersMob1 = [
 ]
 const partnersMob2 = [
     {
-        photo: partner1922,
+        photo: partner123653,
     },
     {
-        photo: partner1923,
+        photo: partner125986,
     },
     {
         photo: partner1925,
@@ -51,14 +53,18 @@ const partnersMob3 = [
     {
         photo: partner1928,
     },
+    {
+        photo: partner125248,
+    },
 ]
 const partnersMobileScreen1 = [
     {
-        photo: partner123653,
+        photo: partner1922,
     },
     {
-        photo: partner125986,
+        photo: partner1923,
     },
+
 ]
 const partnersMobileScreen2 = [
     {
@@ -70,16 +76,17 @@ const partnersMobileScreen2 = [
 ]
 const partnersMobileScreen3 = [
     {
-        photo: partner1922,
+        photo: partner1925,
     },
+
     {
-        photo: partner1923,
+        photo: partner125986,
     },
 
 ]
 const partnersMobileScreen4 = [
     {
-        photo: partner1925,
+        photo: partner123653,
     },
     {
         photo: partner1926,
@@ -94,19 +101,12 @@ const partnersMobileScreen5 = [
         photo: partner1928,
     },
 ]
+const partnersMobileScreen6 = [
+    {
+        photo: partner125248,
+    },
+]
 const partnersDesk1 = [
-    {
-        photo: partner123653,
-    },
-    {
-        photo: partner125986,
-    },
-    {
-        photo: partner1917,
-    },
-    {
-        photo: partner126592,
-    },
     {
         photo: partner1922,
     },
@@ -114,20 +114,38 @@ const partnersDesk1 = [
         photo: partner1923,
     },
     {
+        photo: partner1917,
+    },
+    {
         photo: partner1925,
+    },
+    {
+        photo: partner1927,
     },
     {
         photo: partner1926,
     },
+    {
+        photo: partner125248,
+    },
+
+
+    {
+        photo: partner1928,
+    },
+
 
 ];
 
 const partnersDesk2 = [
     {
-        photo: partner1927,
+        photo: partner125986,
     },
     {
-        photo: partner1928,
+        photo: partner123653,
+    },
+    {
+        photo: partner126592,
     },
 ];
 

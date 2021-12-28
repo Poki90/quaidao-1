@@ -6,19 +6,19 @@ const projectsSection = [
     {
         icon: projectssectionIcon,
         text: 'MeDIA eYe NFT Portal',
-        textSecondary: 'The aNFT Creator Portal is designed to support marketers, artists, businesses, and other organizations wanting to merchandise, promote, and advertise their products.',
+        textSecondary: 'The NFT Creator Portal is designed to support marketers, artists, businesses, and other organizations wanting to merchandise, promote, and advertise their products.',
         buttonText: 'Explore',
     },
     {
         icon: projectssectionIcon,
         text: 'MeDIA eYe NFT Portal',
-        textSecondary: 'The fNFT Creator Portal is designed to support marketers, artists, businesses, and other organizations wanting to merchandise, promote, and advertise their products.',
+        textSecondary: 'The NFT Creator Portal is designed to support marketers, artists, businesses, and other organizations wanting to merchandise, promote, and advertise their products.',
         buttonText: 'Explore',
     },
     {
         icon: projectssectionIcon,
         text: 'MeDIA eYe NFT Portal',
-        textSecondary: 'Thse NFT Creator Portal is designed to support marketers, artists, businesses, and other organizations wanting to merchandise, promote, and advertise their products.',
+        textSecondary: 'The NFT Creator Portal is designed to support marketers, artists, businesses, and other organizations wanting to merchandise, promote, and advertise their products.',
         buttonText: 'Explore',
     },
 ]

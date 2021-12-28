@@ -282,8 +282,8 @@ const GatewayDeFi = () => {
                         smart contracts without having to worry about wrapping or unwrapping tokens.
                     </div>
                 </div>
-                <div className="staking-button" style={{zIndex: 0}}>
-                    <UiButton priority='white' type='button' ><p>Explore</p>
+                <div className="staking-button"  style={{zIndex: 0 , width:294}}>
+                    <UiButton priority='white' style={{zIndex: 0 , width:294}} type='button' ><p>Explore</p>
                     </UiButton>
                 </div>
             </div>

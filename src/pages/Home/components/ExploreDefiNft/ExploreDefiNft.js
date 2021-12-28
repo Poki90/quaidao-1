@@ -12,19 +12,19 @@ const exploreDefiNFTs = [
     {
         headerIcon: raskoHeadIcon,
         icon: raskoBodyIcon,
-        text: 'Create a Money Market',
+        text: 'Create Borrow and Lend Money Market for Crypto Assets',
         buttonText: 'Explore rASKO',
     },
     {
         headerIcon: QUAIheadIcon,
         icon: QUAIbodyIcon,
-        text: 'Allocate capital with Intelligent Yield Farming',
+        text: 'Allocate capital with Intelligent and Automated Yield Farming',
         buttonText: 'Explore QUAI Invest',
     },
     {
         headerIcon: mediaHead,
         icon: mediaBody,
-        text: 'Launch Airdrop',
+        text: 'Create NFTs and Launch Custom Airdrops',
         buttonText: 'Explore MeDIA eYe',
     },
 ]

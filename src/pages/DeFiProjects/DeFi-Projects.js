@@ -42,7 +42,7 @@ const DeFiProjects = observer(() => {
                               <p className='secondary'><span className='number'>6</span></p>
                             </div>
                             <div>
-                              <p className='primary'>Staking Rate APYs</p>
+                              <p className='primary'>Staking Rate APY</p>
                               <p className='secondary'>up to <span className='number'>480%</span></p>
                             </div>
                             <div>

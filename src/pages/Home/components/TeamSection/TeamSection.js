@@ -166,7 +166,8 @@ const TeamSection = () => {
                             <div className='container__list--item' key={member.fullName}>
                                 <div className='photo'>
                                     <ReactSVG className='ln-icon' src={lnIcon} wrapper='span'/>
-                                    <img src={member.photo} alt={member.fullName}/>
+                                    <img style={{marginTop: member.fullName === 'Davien' && 4}} src={member.photo}
+                                         alt={member.fullName}/>
                                 </div>
                                 <div className='fullName'>{member.fullName}</div>
                                 <div className='description'>{member.description}</div>
@@ -192,7 +193,9 @@ const TeamSection = () => {
                                                             <div className='photo'>
                                                                 <ReactSVG className='ln-icon' src={lnIcon}
                                                                           wrapper='span'/>
-                                                                <img src={member.photo} alt={member.fullName}/>
+                                                                <img
+                                                                    style={{marginTop: member.fullName === 'Davien' && 4}}
+                                                                    src={member.photo} alt={member.fullName}/>
                                                             </div>
                                                             <div className='fullName'>{member.fullName}</div>
                                                             <div className='description'>{member.description}</div>
@@ -208,7 +211,9 @@ const TeamSection = () => {
                                                             <div className='photo'>
                                                                 <ReactSVG className='ln-icon' src={lnIcon}
                                                                           wrapper='span'/>
-                                                                <img src={member.photo} alt={member.fullName}/>
+                                                                <img
+                                                                    style={{marginTop: member.fullName === 'Davien' && 4}}
+                                                                    src={member.photo} alt={member.fullName}/>
                                                             </div>
                                                             <div className='fullName'>{member.fullName}</div>
                                                             <div className='description'>{member.description}</div>
@@ -226,7 +231,9 @@ const TeamSection = () => {
                                                             <div className='photo'>
                                                                 <ReactSVG className='ln-icon' src={lnIcon}
                                                                           wrapper='span'/>
-                                                                <img src={member.photo} alt={member.fullName}/>
+                                                                <img
+                                                                    style={{marginTop: member.fullName === 'Davien' && 4}}
+                                                                    src={member.photo} alt={member.fullName}/>
                                                             </div>
                                                             <div className='fullName'>{member.fullName}</div>
                                                             <div className='description'>{member.description}</div>
@@ -242,7 +249,9 @@ const TeamSection = () => {
                                                             <div className='photo'>
                                                                 <ReactSVG className='ln-icon' src={lnIcon}
                                                                           wrapper='span'/>
-                                                                <img src={member.photo} alt={member.fullName}/>
+                                                                <img
+                                                                    style={{marginTop: member.fullName === 'Davien' && 4}}
+                                                                    src={member.photo} alt={member.fullName}/>
                                                             </div>
                                                             <div className='fullName'>{member.fullName}</div>
                                                             <div className='description'>{member.description}</div>
@@ -258,7 +267,9 @@ const TeamSection = () => {
                                                             <div className='photo'>
                                                                 <ReactSVG className='ln-icon' src={lnIcon}
                                                                           wrapper='span'/>
-                                                                <img src={member.photo} alt={member.fullName}/>
+                                                                <img
+                                                                    style={{marginTop: member.fullName === 'Davien' && 4}}
+                                                                    src={member.photo} alt={member.fullName}/>
                                                             </div>
                                                             <div className='fullName'>{member.fullName}</div>
                                                             <div className='description'>{member.description}</div>
@@ -274,7 +285,9 @@ const TeamSection = () => {
                                                             <div className='photo'>
                                                                 <ReactSVG className='ln-icon' src={lnIcon}
                                                                           wrapper='span'/>
-                                                                <img src={member.photo} alt={member.fullName}/>
+                                                                <img
+                                                                    style={{marginTop: member.fullName === 'Davien' && 4}}
+                                                                    src={member.photo} alt={member.fullName}/>
                                                             </div>
                                                             <div className='fullName'>{member.fullName}</div>
                                                             <div className='description'>{member.description}</div>

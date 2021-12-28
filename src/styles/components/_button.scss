@@ -1,5 +1,10 @@
 .ui-button-wrap {
   position: relative;
+  border: 1px dashed #3A6BFF;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 2px;
+  height: 52px;
 
   .back-primary {
     position: absolute;
@@ -10,7 +15,6 @@
     background: #C4D2FF;
     border-radius: 6px;
   }
-
   &:hover {
     .back-primary {
       position: absolute;
@@ -85,19 +89,20 @@
       z-index: 2;
     }
   }
-
   .btn {
+    margin-top: 5px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: max-content;
-    white-space: pre-wrap;
+    width: 224px!important;
+    white-space: nowrap;
     height: 52px;
     border-radius: 6px;
-    font-size: 1.8rem;
+    font-size: 24px!important;
+    line-height: 28px;
     border: currentColor 1px solid;
     padding: 0 2rem;
     box-sizing: border-box;
@@ -105,7 +110,6 @@
     font-family: Rubik, "Open Sans", sans-serif;
     font-style: normal;
     font-weight: bold;
-    line-height: 28px;
     position: relative;
     transition: all 0.5s;
 
@@ -139,7 +143,7 @@
       position: absolute;
       top: -1px;
       left: -1px;
-      width: 102%;
+      width: 100%;
       height: 102%;
       z-index: 1;
       opacity: 0;
@@ -163,7 +167,8 @@
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 24px!important;
+      line-height: 28px;
       position: relative;
       font-family: Neue Machina, sans-serif;
     }

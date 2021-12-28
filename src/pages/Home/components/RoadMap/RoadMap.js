@@ -17,12 +17,14 @@ const RoadMap = () => (
                 {roadMapList.map((item, index) => {
                     return (
                         <div className='container__list--item' key={index}>
-                            <div className='li-title'>
-                                <p>Q{index + 1}</p>
+                            <div style={{border: index === 3 && "4px solid #fff"}} className='li-title'>
+                                <p style={{color: index === 3 && "#fff"}}>Q{index + 1}</p>
                             </div>
                             <div>
-                                {item.ul.map(li => <div key={li} className='li'><ReactSVG className='li__icon' src={li !== '' ? fireDotIcon : <svg></svg>}
-                                                                                 wrapper='span'/> {li}</div>)}
+                                {item.ul.map(li => <div key={li} className='li'><ReactSVG className='li__icon'
+                                                                                          src={li !== '' ? fireDotIcon :
+                                                                                              <svg></svg>}
+                                                                                          wrapper='span'/> {li}</div>)}
                             </div>
                         </div>
                     )

@@ -13,6 +13,10 @@
   .top-section {
     display: flex;
     flex-direction: row;
+    height: 100vh;
+    @media(max-width: 600px) {
+      height: auto;
+    }
 
     &__left-part {
       background-color: transparent;
@@ -23,32 +27,34 @@
       flex-direction: column;
       padding: 0 102px 0;
       @media(max-width: 600px) {
-        padding: 0 12px 0;
+        padding: 12px;
+        height: 650px;
       }
 
       .info-section {
+        margin-top: 119px;
         width: 100%;
-        height: 100%;
+        height: 696px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        padding-top: 140px;
         @media(max-width: 600px) {
-          padding-top: 40px;
-
+          display: flex;
+          height: 696px;
+          align-items: center;
         }
 
         .we-are {
           display: flex;
           flex-direction: column;
-          padding-bottom: 19.9375rem;
 
           .primary {
-            font-family: Rubik, "Open Sans", sans-serif;
+            font-family: Rubik, sans-serif;
             font-style: normal;
             font-weight: bold;
             font-size: 73px;
             line-height: 87px;
+            color: #F4F7FD;
             @media(max-width: 600px) {
               font-size: 73px;
               line-height: 87px;
@@ -70,6 +76,14 @@
             }
             color: #F4F7FD;
 
+            .ACCELERATOR {
+              font-style: normal;
+              font-weight: bold;
+              font-size: 38px;
+              line-height: 45px;
+              color: #F4F7FD;
+
+            }
           }
         }
 
@@ -120,12 +134,12 @@
       flex-direction: column;
       position: relative;
       z-index: 1;
-      background: #F2F3F3;
+      background: #F4F7FD;
 
       .top-eclipse {
         position: absolute;
         left: -195px;
-        top: 199px;
+        top: 321px;
         @media (max-width: 800px) {
           transform: translate(57%, -50%);
           width: 50%;
@@ -144,6 +158,7 @@
         height: 106px;
         align-items: center;
         justify-content: center;
+        margin-left: 120px;
       }
     }
 
@@ -192,6 +207,7 @@
           padding-bottom: 110px;
           padding-left: 60px;
           width: 70%;
+          margin-top: 50px;
           @media (max-width: 600px) {
             padding-left: 0;
             width: 100%;
@@ -229,6 +245,7 @@
       background: url("../../assets/images/main-right.png") #F4F7FD no-repeat;
       width: 100%;
       height: 100%;
+      background-size: cover;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -242,10 +259,10 @@
         cursor: pointer;
         z-index: 2;
         position: absolute;
-        left: -165px;
-        top: 454px;
+        left: -183px;
+        top: 562px;
         bottom: 0;
-        transform: scale(3);
+        transform: scale(3.5);
         @media (max-width: 800px) {
           cursor: pointer;
           width: 400px;
@@ -273,7 +290,7 @@
     display: flex;
     padding: 120px 0;
     background-position-y: 200px;
-    height: 100vh;
+    height: 100vh !important;
     @media (max-width: 800px) {
       height: auto;
       padding: 20px 0;
@@ -314,7 +331,7 @@
         align-items: center;
         justify-content: space-between;
         flex-direction: row;
-        gap: 50px;
+        gap: 42px;
         @media (max-width: 800px) {
           flex-direction: column;
           gap: 50px;
@@ -349,7 +366,7 @@
               position: absolute;
               bottom: 0;
               left: 0;
-              width: 100%;
+              width: 99.5%;
               height: 0;
               border: 1px solid rgba(0, 34, 167, 0.26);
             }
@@ -361,7 +378,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            padding: 25px;
+            padding: 17px;
             z-index: 3;
             position: relative;
 
@@ -393,6 +410,7 @@
             }
 
             .defi-group-button {
+              margin-top: 25px;
               cursor: pointer;
               width: 100%;
               height: 52px;
@@ -403,7 +421,6 @@
               align-items: center;
               justify-content: center;
               background: #F4F7FD;
-              margin-bottom: 20px;
               transition: all .35s;
               position: relative;
               color: #005BBC;
@@ -413,6 +430,7 @@
                 content: "";
                 top: 0;
                 left: 0;
+                border-radius: 4px;
                 width: 0;
                 height: 100%;
                 background: #0022A7;
@@ -449,7 +467,7 @@
     background: url("../../assets/images/gateway-DeFi-background.png") #F4F7FD no-repeat;
     display: flex;
     height: 546px;
-    background-size: cover; /* Масштабируем фон */
+    background-size: cover;
     z-index: 0;
     padding: 15px;
 
@@ -485,7 +503,7 @@
       flex-direction: column;
       justify-content: center;
       position: relative;
-      @media (max-width: 600px) {
+      @media (max-width: 900px) {
         width: 100%;
       }
 
@@ -493,15 +511,18 @@
         font-family: Rubik, "Open Sans", sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 5rem;
-        line-height: 5.9375rem;
-        color: #FFFFFF;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         text-align: center;
-        padding-bottom: 45px;
+        font-size: 80px;
+        line-height: 95px;
+        padding-bottom: 80px;
+        margin-top: -100px;
+        color: #FFFFFF;
         @media (max-width: 600px) {
+          padding-bottom: 0px;
+          margin-top: 0px;
           position: absolute;
           left: 0;
           right: 0;
@@ -510,7 +531,6 @@
           font-size: 36px;
           line-height: 43px;
         }
-
       }
 
       .gateway-DeFi__info {
@@ -557,10 +577,16 @@
       }
 
       .staking-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding-top: 50px;
         @media (max-width: 600px) {
           margin-top: -120px;
           transform: scale(0.8);
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         div {
@@ -578,6 +604,10 @@
     display: flex;
     padding-top: 120px;
     padding-bottom: 100px;
+    @media (max-width: 600px) {
+      height: auto;
+
+    }
 
     .container {
       margin: 0 auto;
@@ -592,8 +622,8 @@
         font-family: Rubik, "Open Sans", sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 3.5rem;
-        line-height: 4.125rem;
+        font-size: 48px;
+        line-height: 57px;
         color: #005BBC;
         display: flex;
         align-items: center;
@@ -633,8 +663,8 @@
             box-shadow: -4px 8px 11px rgba(0, 0, 0, 0.43), inset 0px 5px 5px #FFFFFF;
             border-radius: 18px;
             z-index: 2;
+            gap: 30px;
             position: absolute;
-            left: 0;
             left: 20px !important;
             top: 20px;
             bottom: 0;
@@ -644,13 +674,15 @@
               display: flex;
               flex-direction: column;
               align-items: center;
-              justify-content: space-around;
+              justify-content: space-evenly;
               padding: 20px;
               text-align: center;
               gap: 10px;
 
               .icon {
-                padding-bottom: 10px;
+                padding-top: 28px;
+                margin-top: 20px;
+
               }
 
               .text {
@@ -676,6 +708,7 @@
 
               .projects-group-button {
                 width: 100%;
+                margin-top: 20px;
                 min-height: 52px !important;
                 border: 1px solid #005BBC;
                 box-sizing: border-box;
@@ -685,15 +718,40 @@
                 justify-content: center;
                 cursor: pointer;
                 background: #F4F7FD;
+                transition: all .35s;
+                position: relative;
+                color: #005BBC;
+
+                &:after {
+                  position: absolute;
+                  content: "";
+                  top: 0;
+                  left: 0;
+                  border-radius: 4px;
+                  width: 0;
+                  height: 100%;
+                  background: #0022A7;
+                  transition: all .35s;
+                }
+
+                &:hover {
+                  color: #fff;
+                }
+
+                &:hover::after {
+                  width: 100%;
+                }
 
                 p {
+                  position: relative;
+                  z-index: 2;
                   font-family: Rubik, "Open Sans", sans-serif;
                   font-style: normal;
                   font-weight: bold;
                   font-size: 1.5rem;
                   line-height: 1.75rem;
-                  color: #005BBC;
                 }
+
               }
             }
           }
@@ -705,7 +763,7 @@
   .quai-farm {
     min-height: 500px;
     padding: 15px;
-    background: url("../../assets/images/eath-back-desk.png") #F4F7FD no-repeat;
+    background: url("../../assets/images/eath-back-desk.png") #fff no-repeat;
     @media (max-width: 600px) {
       background: url("../../assets/images/earth-back.png") #F4F7FD;
 
@@ -748,7 +806,7 @@
         align-items: center;
         justify-content: space-between;
         width: inherit;
-        grid-template-columns: repeat(auto-fill, minmax(90px, 90px));
+        grid-template-columns: repeat(10, minmax(90px, 90px));
         grid-gap: 1rem;
         overflow: hidden;
 
@@ -775,6 +833,7 @@
     flex-direction: column;
     background: url("../../assets/images/road-map-back.png") #F4F7FD no-repeat;
     background-size: cover;
+    background-position: center;
     @media (max-width: 600px) {
       padding-top: 45px;
       height: auto;
@@ -791,7 +850,7 @@
       font-size: 48px;
       line-height: 57px;
       color: #FFFFFF;
-      padding-bottom: 70px;
+      padding-bottom: 16px;
       @media (max-width: 600px) {
         flex-direction: column;
       }
@@ -862,11 +921,13 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            box-shadow: 0px 0px 9px #02FFFF;
 
             p {
               font-size: 31px;
               animation: neon .08s ease-in-out infinite alternate;
               color: #22DAF9;
+
               font-weight: bold;
             }
           }
@@ -904,6 +965,102 @@
             color: #FFFFFF;
             margin-top: 26px;
             padding-right: 25px;
+            margin-left: 22px;
+            position: relative;
+            @media (max-width: 600px) {
+              margin-left: 40px;
+            }
+
+            &__icon {
+              position: absolute;
+              top: -33px;
+              left: -60px;
+
+              span {
+                width: 65px;
+              }
+            }
+          }
+        }
+
+        .container__list--item:last-of-type {
+          &:after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 0;
+            left: 84px;
+            z-index: -21;
+            top: 38px;
+            border: 4px solid #fff;
+          }
+
+
+          @media (max-width: 600px) {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            &:after {
+              content: '';
+              position: absolute;
+              width: 0;
+              height: 120%;
+              z-index: -21;
+              left: 40px;
+              top: 83px;
+              border: 4px solid #fff;
+
+              &:last-child {
+                border: 4px solid white;
+              }
+            }
+          }
+
+          .li-title {
+            z-index: 10;
+            min-width: 88px !important;
+            max-width: 88px !important;
+            min-height: 88px !important;
+            max-height: 88px !important;
+            border: 4px solid #0075FF;
+            border-radius: 50%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            p {
+              font-size: 31px;
+              animation: neon .08s ease-in-out infinite alternate;
+              color: #22DAF9;
+              font-weight: bold;
+            }
+          }
+
+          @keyframes neon {
+            from {
+              text-shadow: 0 0 6px rgba(202, 228, 225, 0.92);
+            }
+            to {
+              text-shadow: 0 0 6px rgba(202, 228, 225, 0.98);
+            }
+          }
+
+          .li {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            height: auto;
+            flex-direction: row;
+            font-family: Open Sans, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            color: #FFFFFF;
+            margin-top: 26px;
+            padding-right: 25px;
             margin-left: 40px;
             position: relative;
 
@@ -918,7 +1075,6 @@
             }
           }
         }
-
       }
 
     }
@@ -1008,10 +1164,8 @@
             }
 
             img {
-
               transition: 1s;
               filter: grayscale(100%);
-
             }
 
             &:hover {
@@ -1040,7 +1194,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            width: 100%;
+            width: 277px;
             font-family: Open Sans, sans-serif;
             font-style: normal;
             font-weight: normal;
@@ -1055,8 +1209,14 @@
 
   .partners-section {
     padding-bottom: 140px;
-
+    background: #F4F7FD;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     &__title {
+      padding-top: 130px;
       font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: bold;
@@ -1169,6 +1329,7 @@
   }
 
   .last-section {
+    margin-top: -81px;
     height: 263px;
     background: url("../../assets/images/last-section-bg.png") #F4F7FD no-repeat;
     background-size: cover;
@@ -1253,6 +1414,7 @@
           color: #0022A7;
           height: 58px;
           padding: 0 50px;
+
         }
       }
     }

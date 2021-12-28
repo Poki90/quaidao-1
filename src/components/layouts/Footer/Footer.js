@@ -18,7 +18,7 @@ const Footer = () => {
             className="footer"
         >
             <div className="wrapper">
-                <div><ReactSVG src={logo}/></div>
+                <ReactSVG src={logo}/>
                 <div className="footer-menu">
                     <div className='footer-menu__item'>Governance</div>
                     <div className='footer-menu__item'>DeFi Projects</div>
