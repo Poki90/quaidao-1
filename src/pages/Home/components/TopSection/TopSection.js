@@ -3,7 +3,7 @@ import RenderResponsiveBlocks from "components/RenderResponsiveBlocks";
 import Header from "components/layouts/Header";
 import UiButton from "components/UiButton";
 import {useMobileDetect} from "hooks";
-import topImage from 'assets/images/Ellipse 1.png'
+import topImage from 'assets/images/main-top-section-image.png'
 const TopSection = ({openModal}) => {
     const {isDesktop} = useMobileDetect();
 
@@ -42,9 +42,16 @@ const TopSection = ({openModal}) => {
                 </div>}
                 rightChildren={
                     <div className="top-section__right-part">
-                        <img className='top-eclipse' src={topImage} alt='top logo'/>
+                        <div className='top-eclipse'>
+                            <img src={topImage} alt='top logo'/>
+                            <a href="https://google.com" target="_blank" className="one"/>
+                            <a href="https://google.com" target="_blank" className="two"/>
+                            <a href="https://google.com" target="_blank" className="three"/>
+                            <a href="https://google.com" target="_blank" className="four"/>
+                        </div>
                         <div className="top-section__right-part__heading-button">
-                            {isDesktop && <UiButton  priority='primary' type='button' onclick={openModal}><p>Cohort farming</p>
+                            {isDesktop &&
+                            <UiButton priority='primary' type='button' onclick={openModal}><p>Cohort farming</p>
                             </UiButton>}
                         </div>
                         <div style={{height: 400, display: "flex", alignItems: 'center', justifyContent: 'center'}}>

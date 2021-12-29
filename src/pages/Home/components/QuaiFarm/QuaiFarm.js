@@ -33,6 +33,10 @@ const icons = [
         key: 'icon5Icon'
     },
     {
+        icon: icon10Icon,
+        key: 'icon10Icon'
+    },
+    {
         icon: icon6Icon,
         key: 'icon6Icon'
     },
@@ -47,10 +51,6 @@ const icons = [
     {
         icon: icon9Icon,
         key: 'icon9Icon'
-    },
-    {
-        icon: icon10Icon,
-        key: 'icon10Icon'
     },
 ]
 

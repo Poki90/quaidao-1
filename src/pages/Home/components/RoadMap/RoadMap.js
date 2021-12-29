@@ -18,7 +18,10 @@ const RoadMap = () => (
                     return (
                         <div className='container__list--item' key={index}>
                             <div style={{border: index === 3 && "4px solid #fff"}} className='li-title'>
-                                <p style={{color: index === 3 && "#fff"}}>Q{index + 1}</p>
+                                <p style={{
+                                    color: index === 3 && "#fff",
+                                    animation: index !== 3 && 'neon .08s ease-in-out infinite alternate'
+                                }}>Q{index + 1}</p>
                             </div>
                             <div>
                                 {item.ul.map(li => <div key={li} className='li'><ReactSVG className='li__icon'
