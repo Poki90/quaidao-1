@@ -1,7 +1,7 @@
 import React from 'react';
 import {socialsLinks} from 'config';
 import {ReactSVG} from "react-svg";
-import logo from 'assets/svg/header-logo.svg';
+import logo from 'assets/svg/footer-logo.svg';
 
 const Footer = () => {
 

@@ -22,8 +22,12 @@
   height: 20px;
   right: 35px;
   top: 60px;
-  @media (min-width: 600px) {
+  @media (min-width: 1410px) {
     display: none;
+  }
+  @media (max-width: 1410px) {
+    right: 30%;
+    display: block;
   }
 
   .bm-burger-bars {
@@ -141,16 +145,16 @@
 .header-sidebar {
   position: absolute;
   top: 0;
-  bottom: 0;
   right: 0;
   left: 0;
-  height: 191px;
+  min-height: 200px;
   width: 100%;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   flex-direction: column !important;
-  background: url("../../assets/images/header mob-sidebar.png") #F4F7FD no-repeat;
+  background-size: cover !important;
+  background: url("../../assets/images/header mob-sidebar.png") no-repeat;
 
 
   .top {
@@ -159,7 +163,7 @@
     justify-content: space-between !important;
     flex-direction: row !important;
     width: 100%;
-    padding: 40px 15px 0 10px;
+    padding: 20px 15px 20px 10px;
 
   }
   .staking-button{

@@ -36,7 +36,7 @@ const ExploreDefiNft = () => (
          data-aos-duration="500">
         <div className='container'>
             <div className='explore-defi-nft__title'>
-                Explore the DeFi NFT Ecosystem
+                Explore the DeFi and NFT Ecosystem
             </div>
             <div className='container__items'>
                 {

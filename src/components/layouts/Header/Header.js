@@ -4,7 +4,7 @@ import {observer} from 'mobx-react-lite';
 import headerLogoSvg from '../../../assets/svg/header-logo.svg';
 import {DEFI_PROJECTS, MAIN_PAGE} from "config";
 import {Link, useLocation} from "react-router-dom";
-import {useMobileDetect} from "hooks";
+import {useMedia, useMobileDetect} from "hooks";
 
 const headerConfig = [
     {
@@ -27,12 +27,12 @@ const headerConfig = [
 
 export const Header = observer(() => {
     const {pathname} = useLocation();
-    const { isDesktop } = useMobileDetect();
+    const isSmall = useMedia('(min-width: 1410px)');
     return (
         <div className="header">
             <div className='menu'>
-                <ReactSVG style={{marginTop:!isDesktop && 40}} src={headerLogoSvg} wrapper='span'/>
-                {isDesktop && headerConfig.map(({link, text}) => (
+                <ReactSVG style={{marginTop:!isSmall && 40}} src={headerLogoSvg} wrapper='span'/>
+                {isSmall && headerConfig.map(({link, text}) => (
                     <div className='menu-link' key={text}>
                         <Link to={link}>{text}</Link>
                         {pathname === link && <div className="menu-link--active"/>}

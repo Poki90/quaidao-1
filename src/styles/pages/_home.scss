@@ -21,6 +21,10 @@
       .right {
         background-size: contain;
         background: url("../../assets/images/Subtract.png") no-repeat;
+        background-repeat-y: initial;
+        @media(max-width: 600px) {
+          background-color: #F4F7FD;
+        }
       }
     }
 
@@ -317,7 +321,7 @@
           margin: 0 auto;
           top: -57px;
           left: 0;
-          transform: translate(-3%, -50%);
+          transform: translate(-3%, -50%) !important;
           right: 0;
         }
       }
@@ -553,7 +557,7 @@
       flex-direction: column;
       justify-content: center;
       position: relative;
-      @media (max-width: 900px) {
+      @media (max-width: 1200px) {
         width: 100%;
       }
 
