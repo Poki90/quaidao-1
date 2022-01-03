@@ -943,15 +943,16 @@
         @media (max-width: 600px) {
           grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
           padding-bottom: 60px;
+          .iconicon8Icon {
+            grid-column: 2 / span 1;
+          }
+
+          .iconicon9Icon {
+            grid-column: 3 / span 1;
+          }
         }
 
-        .iconicon8Icon {
-          grid-column: 2 / span 1;
-        }
 
-        .iconicon9Icon {
-          grid-column: 3 / span 1;
-        }
 
         > div {
           span {
