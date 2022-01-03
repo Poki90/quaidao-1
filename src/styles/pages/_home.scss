@@ -9,7 +9,8 @@
   .top-section {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    min-height: 100vh;
+
     @media(max-width: 600px) {
       height: auto;
     }
@@ -17,13 +18,20 @@
     .render-responsive-blocks {
       background: url("../../assets/images/bg main.png") #F4F7FD no-repeat;
       background-size: cover;
+      @media(max-width: 600px) {
+        background: url("../../assets/images/bg main mobile.png") #F4F7FD no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
 
       .right {
-        background-size: contain;
+        background-size: contain !important;
         background: url("../../assets/images/Subtract.png") no-repeat;
-        background-repeat-y: initial;
+        background-repeat-y: initial !important;
         @media(max-width: 600px) {
-          background-color: #F4F7FD;
+          background: url("../../assets/images/bg right main.png") transparent no-repeat;
+          background-position: center !important;
+          background-size: cover !important;
         }
       }
     }
@@ -49,6 +57,7 @@
         justify-content: space-between;
         flex-direction: column;
         @media(max-width: 600px) {
+          margin-top: 77px;
           display: flex;
           height: 696px;
           align-items: center;
@@ -148,12 +157,19 @@
       .top-eclipse {
         position: absolute;
         left: -195px;
-        top: 126px;
+        top: 121px;
         @media (max-width: 800px) {
-          transform: translate(57%, -50%);
-          width: 50%;
+          width: 100%;
           left: 0;
-          top: 0;
+          right: 0;
+          bottom: 0;
+          top: -238px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            margin: 0 auto;
+          }
         }
 
         .one {
@@ -165,6 +181,10 @@
           position: absolute;
           width: 110px;
           height: 110px;
+          @media (max-width: 800px) {
+            bottom: 0;
+            transform: translate(166%, 278%)
+          }
         }
 
         .two {
@@ -176,6 +196,11 @@
           position: absolute;
           width: 110px;
           height: 110px;
+          @media (max-width: 800px) {
+            bottom: 0;
+            transform: translate(-88%, 266%)
+
+          }
         }
 
         .three {
@@ -187,6 +212,11 @@
           position: absolute;
           width: 110px;
           height: 110px;
+          @media (max-width: 800px) {
+            bottom: 0;
+            transform: translate(-212%, 107%)
+
+          }
         }
 
         .four {
@@ -198,11 +228,15 @@
           position: absolute;
           width: 110px;
           height: 110px;
+          @media (max-width: 800px) {
+            bottom: 0;
+            transform: translate(-139%, -89%)
+          }
         }
       }
 
       @media (max-width: 600px) {
-        height: 300px;
+        height: 100% !important;
         box-shadow: 0 1px 31px rgba(0, 0, 0, 0.58);
       }
 
@@ -221,6 +255,10 @@
     display: flex;
     flex-direction: row;
     position: relative;
+
+    .right {
+      height: 400px !important;
+    }
 
     &__left-part {
       width: 100%;
@@ -250,7 +288,8 @@
           width: 80%;
           padding-bottom: 40px;
           @media (max-width: 600px) {
-            width: 80%;
+            width: 100%;
+            padding-bottom: 0px;
           }
         }
 
@@ -285,6 +324,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
+              margin-bottom: 51px;
             }
           }
 
@@ -303,9 +343,9 @@
       align-items: center;
       flex-direction: column;
       position: relative;
-      z-index: 1;
+      z-index: 0;
       @media (max-width: 800px) {
-        height: 250px;
+        height: inherit;
       }
 
       .chip {
@@ -317,16 +357,19 @@
         transform: scale(3.5);
         @media (max-width: 800px) {
           cursor: pointer;
-          width: 400px;
+          width: 528px;
           margin: 0 auto;
-          top: -57px;
+          top: -52px;
+          z-index: 0;
           left: 0;
-          transform: translate(-3%, -50%) !important;
+          transform: translate(-8%, -50%) !important;
           right: 0;
         }
       }
 
       &__heading-button {
+        position: relative;
+        z-index: 2;
         display: flex;
         height: 106px;
         align-items: center;
@@ -342,10 +385,12 @@
     display: flex;
     padding: 120px 0;
     background-position-y: 200px;
-    height: 100vh;
+    min-height: 100vh;
+
     @media (max-width: 800px) {
       height: auto !important;
       padding: 20px 0;
+      background-position-y: bottom;
 
     }
 
@@ -524,9 +569,26 @@
     background-size: cover;
     z-index: 0;
     padding: 15px;
+    position: relative;
 
     .bitcoin-chain {
-      display: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      div {
+        div {
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
     }
 
     @media (max-width: 600px) {
@@ -587,12 +649,13 @@
       }
 
       .gateway-DeFi__info {
+        max-width: 799px;
         background: rgba(3, 0, 38, 0.45);
         border: 1px solid #0075FF;
-        padding: 28px 94px;
+        padding: 30px 23px;
         box-sizing: border-box;
         border-radius: 11px;
-        margin-top: -25px;
+        margin-top: -47px;
         @media (max-width: 600px) {
           margin-top: 0;
           margin-bottom: 100px;
@@ -659,9 +722,12 @@
     display: flex;
     padding-top: 120px;
     padding-bottom: 100px;
-    height: 100vh;
+    min-height: 100vh;
+
     @media (max-width: 600px) {
       height: auto;
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
 
     .container {
@@ -821,7 +887,7 @@
     background: url("../../assets/images/eath-back-desk.png") #fff no-repeat;
     @media (max-width: 600px) {
       background: url("../../assets/images/earth-back.png") #F4F7FD;
-
+      padding: 0px;
     }
     background-size: cover;
     background-position: center;
@@ -844,6 +910,10 @@
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
         padding-bottom: 43px;
         padding-top: 80px;
+        @media (max-width: 600px) {
+          background: url("../../assets/images/earth-back.png") #F4F7FD;
+          padding-top: 60px;
+        }
       }
 
       .quai-farm__secondary {
@@ -866,11 +936,18 @@
         overflow: hidden;
         @media (max-width: 600px) {
           grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+          padding-bottom: 60px;
+        }
 
+        .iconicon8Icon {
+          grid-column: 2 / span 1;
+        }
+
+        .iconicon9Icon {
+          grid-column: 3 / span 1;
         }
 
         > div {
-
           span {
             span {
               svg {
@@ -927,7 +1004,6 @@
         padding: 15px;
         @media (max-width: 600px) {
           flex-direction: column;
-
         }
 
         .container__list--item {
@@ -989,6 +1065,11 @@
             }
           }
 
+          @media (max-width: 600px) {
+            .li-body {
+              margin-top: -24px;
+            }
+          }
 
           .li {
             display: flex;
@@ -1013,7 +1094,7 @@
             &__icon {
               position: absolute;
               top: -33px;
-              left: -60px;
+              left: -67px;
 
               span {
                 width: 65px;
@@ -1138,6 +1219,10 @@
       color: #005BBC;
       padding-top: 128px;
       padding-bottom: 70px;
+      @media (max-width: 600px) {
+        padding-top: 60px;
+        padding-bottom: 51px;
+      }
     }
 
     .container {
@@ -1150,8 +1235,11 @@
         align-items: center;
         justify-content: center;
         flex-direction: row;
-        gap: 80px;
-
+        gap: 126px;
+        @media (max-width: 600px) {
+          padding-top: 52px;
+          padding-bottom: 81px;
+        }
         button {
           display: flex;
           background-color: transparent;
@@ -1184,6 +1272,9 @@
           text-align: center;
           width: 210px;
           gap: 10px;
+          @media (max-width: 600px) {
+            height: 413px;
+          }
 
           .photo {
             width: 100%;
@@ -1236,6 +1327,9 @@
             justify-content: center;
             text-align: center;
             width: 277px;
+            @media (max-width: 600px) {
+              width: 235px;
+            }
             font-family: Open Sans, sans-serif;
             font-style: normal;
             font-weight: normal;
@@ -1251,7 +1345,8 @@
   .partners-section {
     padding-bottom: 140px;
     background: #F4F7FD;
-    height: 100vh;
+    min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;

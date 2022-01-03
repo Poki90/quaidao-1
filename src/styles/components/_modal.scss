@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 1040;
-  background-color: rgba(247, 247, 253, 0.9)
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .modal-wrapper {
@@ -77,6 +77,14 @@
   top: 0;
   bottom: 0;
   background: #F4F7FD;
+
+  .close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+
   @media(max-width: 600px) {
     flex-direction: column;
   }

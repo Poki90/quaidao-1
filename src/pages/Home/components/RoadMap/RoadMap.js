@@ -23,7 +23,7 @@ const RoadMap = () => (
                                     animation: index !== 3 && 'neon .08s ease-in-out infinite alternate'
                                 }}>Q{index + 1}</p>
                             </div>
-                            <div>
+                            <div className='li-body'>
                                 {item.ul.map(li => <div key={li} className='li'><ReactSVG className='li__icon'
                                                                                           src={li !== '' ? fireDotIcon :
                                                                                               <svg></svg>}

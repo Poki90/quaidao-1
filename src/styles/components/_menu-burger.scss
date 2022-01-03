@@ -24,14 +24,18 @@
   top: 60px;
   @media (min-width: 1410px) {
     display: none;
+
   }
   @media (max-width: 1410px) {
-    right: 30%;
+    right: 2%;
+    top: 65px;
     display: block;
+
   }
 
   .bm-burger-bars {
     height: 10% !important;
+    opacity: 0.9;
     @media (min-width: 600px) {
       width: 50% !important;
     }
@@ -41,6 +45,12 @@
 
 .bm-burger-bars {
   background: #FFFFFF;
+  @media (max-width: 1410px) {
+    background-color: #4A38AE;
+  }
+  @media (max-width: 800px) {
+    background-color: #FFFFFF;
+  }
 }
 
 
@@ -67,8 +77,10 @@
   margin-left: auto;
   text-align: end;
 
-  .socials{
-    .socials__list{
+  .socials {
+
+    .socials__list {
+
       margin-top: 70px;
       display: flex;
       align-items: center;

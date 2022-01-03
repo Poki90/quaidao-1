@@ -2,17 +2,19 @@ import React from 'react';
 import RenderResponsiveBlocks from "components/RenderResponsiveBlocks";
 import Header from "components/layouts/Header";
 import UiButton from "components/UiButton";
-import {useMobileDetect} from "hooks";
+import {useMedia} from "hooks";
 import topImage from 'assets/images/main-top-section-image.png'
+import topImageMobile from 'assets/images/main-figure-mob.png'
 const TopSection = ({openModal}) => {
-    const {isDesktop} = useMobileDetect();
+    const isDesktop = useMedia('(max-width: 699px)');
+
 
     return (
         <div className="top-section">
             <RenderResponsiveBlocks
                 leftChildren={<div className="top-section__left-part">
                     <Header/>
-                    {!isDesktop && <div className="staking-button" style={{zIndex: 0,paddingTop:40}}>
+                    {isDesktop && <div className="staking-button" style={{zIndex: 0,paddingTop:40}}>
                         <UiButton priority='white' type='button' onclick={openModal}><p>Cohort farming</p>
                         </UiButton>
                     </div>}
@@ -23,7 +25,7 @@ const TopSection = ({openModal}) => {
                                 style={{fontWeight: 700}}>ACCELERATOR</span></p>
                         </div>
                         {
-                            isDesktop && <div className='we-are-description'>
+                            !isDesktop && <div className='we-are-description'>
                                 <div>
                                     <p className='primary'>Current projects</p>
                                     <p className='secondary'><span className='number'>6</span></p>
@@ -43,14 +45,14 @@ const TopSection = ({openModal}) => {
                 rightChildren={
                     <div className="top-section__right-part">
                         <div className='top-eclipse'>
-                            <img src={topImage} alt='top logo'/>
+                            <img src={!isDesktop ? topImage : topImageMobile} alt='top logo'/>
                             <a href="https://google.com" target="_blank" className="one"/>
                             <a href="https://google.com" target="_blank" className="two"/>
                             <a href="https://google.com" target="_blank" className="three"/>
                             <a href="https://google.com" target="_blank" className="four"/>
                         </div>
                         <div className="top-section__right-part__heading-button">
-                            {isDesktop &&
+                            {!isDesktop &&
                             <UiButton priority='primary' type='button' onclick={openModal}><p>Cohort farming</p>
                             </UiButton>}
                         </div>

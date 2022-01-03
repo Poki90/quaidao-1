@@ -4,6 +4,7 @@ import {ReactSVG} from "react-svg";
 import logo from "assets/svg/home/startModal/logo.svg";
 import modBut1 from "assets/svg/home/startModal/modal-button-1.svg";
 import modBut2 from "assets/svg/home/startModal/modal-button-2.svg";
+import xIcon from "assets/svg/x.svg";
 import modBut3 from "assets/svg/home/startModal/modal-button-3.svg";
 import {useMedia} from "hooks";
 
@@ -21,10 +22,10 @@ const StartModal = ({isShowing,
                 boxSizing: 'border-box',
                 boxShadow: '0px 0px 20px #000AFF',
                 borderRadius: 15,
-                animation: " neon .08s ease-in-out infinite alternate"
             }}
         >
             <div className="starting-modal">
+                <ReactSVG onClick={toggle} className='close-btn' src={xIcon} wrapper='span'/>
                 <div className='starting-modal__info'>
                     <div className='logo'><ReactSVG src={logo} wrapper={"span"}/></div>
                     <div className='primary'><p>Cohort multi-token farms with all farms</p></div>

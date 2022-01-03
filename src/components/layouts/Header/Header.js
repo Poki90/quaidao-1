@@ -21,7 +21,7 @@ const headerConfig = [
     },
     {
         link: `${MAIN_PAGE}Community`,
-        text: 'Community QUAI DAO',
+        text: 'Community',
     },
 ];
 
