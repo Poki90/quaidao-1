@@ -257,7 +257,10 @@
     position: relative;
 
     .right {
-      height: 400px !important;
+      @media (max-width: 800px) {
+        height: 400px !important;
+
+      }
     }
 
     &__left-part {
