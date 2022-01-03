@@ -607,6 +607,8 @@
         right: 0;
         top: 100px;
         bottom: 0;
+        padding-bottom: 21px;
+        margin: 14px;
       }
     }
 
@@ -636,7 +638,7 @@
         padding-bottom: 80px;
         color: #FFFFFF;
         @media (max-width: 600px) {
-          padding-bottom: 0;
+          padding-bottom: 55px;
           margin-top: 0;
           position: absolute;
           left: 0;
@@ -701,6 +703,7 @@
         padding-top: 50px;
         @media (max-width: 600px) {
           margin-top: -120px;
+          padding: 98px 0 0 0;
           transform: scale(0.8);
           display: flex;
           align-items: center;

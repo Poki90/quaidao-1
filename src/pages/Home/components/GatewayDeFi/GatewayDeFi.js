@@ -2,13 +2,17 @@
 import React from 'react';
 import UiButton from "components/UiButton";
 import bitook from 'assets/svg/bittok.svg'
+import bitookMobile from 'assets/svg/bitkoin-mobile.svg'
 import {ReactSVG} from "react-svg";
+import {useMedia} from "hooks";
 
 const GatewayDeFi = () => {
+    const isSmall = useMedia('(max-width: 699px)');
+
     return (
         <div className='gateway-DeFi'>
             <div className='bitcoin-chain'>
-                <ReactSVG src={bitook} wrapper='div'/>
+                <ReactSVG src={!isSmall ? bitook : bitookMobile} wrapper='div'/>
             </div>
             <div className='container'>
                 <div className='gateway-DeFi__title'>
