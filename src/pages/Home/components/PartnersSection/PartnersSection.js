@@ -57,55 +57,7 @@ const partnersMob3 = [
         photo: partner125248,
     },
 ]
-const partnersMobileScreen1 = [
-    {
-        photo: partner1922,
-    },
-    {
-        photo: partner1923,
-    },
 
-]
-const partnersMobileScreen2 = [
-    {
-        photo: partner1917,
-    },
-    {
-        photo: partner126592,
-    },
-]
-const partnersMobileScreen3 = [
-    {
-        photo: partner1925,
-    },
-
-    {
-        photo: partner125986,
-    },
-
-]
-const partnersMobileScreen4 = [
-    {
-        photo: partner123653,
-    },
-    {
-        photo: partner1926,
-    },
-
-]
-const partnersMobileScreen5 = [
-    {
-        photo: partner1927,
-    },
-    {
-        photo: partner1928,
-    },
-]
-const partnersMobileScreen6 = [
-    {
-        photo: partner125248,
-    },
-]
 const partnersDesk1 = [
     {
         photo: partner1922,
@@ -162,8 +114,8 @@ const PartnersSection = () => {
             <div className="container">
                 <CarouselProvider
                     naturalSlideWidth={800}
-                    naturalSlideHeight={!isSmall ? 300 : isMobileScreen ? 800 : 600}
-                    totalSlides={!isSmall ? 2 : isMobileScreen ? 5 : 3}
+                    naturalSlideHeight={!isSmall ? 300 : 820}
+                    totalSlides={!isSmall ? 2 : 3}
                     visibleSlides={1}
                 >
                     <Slider>
@@ -192,101 +144,41 @@ const PartnersSection = () => {
                                                 </div>
                                             ))}
                                     </div>
-                                </Slide></>
+                                </Slide>
+                            </>
                             :
                             <>
-                                {
-                                    isMobileScreen ? <> <Slide index={0}>
-                                        <div className='container__list'>
-                                            {partnersMobileScreen1
-                                                .map((partner, index) => (
-                                                    <div key={index} className='container__list--item'>
-                                                        <div className='container__list--item__hover'>
-                                                            <img className='photo' src={partner.photo} alt='none'/>
-                                                        </div>
+                                <Slide index={0}>
+                                    <div className='container__list'>
+                                        {partnersMob1
+                                            .map((partner, index) => (
+                                                <div key={index} className='container__list--item'>
+                                                    <div className='container__list--item__hover'>
+                                                        <img className='photo' src={partner.photo} alt='none'/>
                                                     </div>
-                                                ))}
-                                        </div>
-                                    </Slide>
-                                        <Slide index={1}>
-                                            <div className='container__list'>
-                                                {partnersMobileScreen2
-                                                    .map((partner, index) => (
-                                                        <div key={index} className='container__list--item'>
-                                                            <div className='container__list--item__hover'>
-                                                                <img className='photo' src={partner.photo} alt='none'/>
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                            </div>
-                                        </Slide>
-                                        <Slide index={2}>
-                                            <div className='container__list'>
-                                                {partnersMobileScreen3
-                                                    .map((partner, index) => (
-                                                        <div key={index} className='container__list--item'>
-                                                            <div className='container__list--item__hover'>
-                                                                <img className='photo' src={partner.photo} alt='none'/>
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                            </div>
-                                        </Slide>
-                                        <Slide index={3}>
-                                            <div className='container__list'>
-                                                {partnersMobileScreen4
-                                                    .map((partner, index) => (
-                                                        <div key={index} className='container__list--item'>
-                                                            <div className='container__list--item__hover'>
-                                                                <img className='photo' src={partner.photo} alt='none'/>
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                            </div>
-                                        </Slide>
-                                        <Slide index={4}>
-                                            <div className='container__list'>
-                                                {partnersMobileScreen5
-                                                    .map((partner, index) => (
-                                                        <div key={index} className='container__list--item'>
-                                                            <div className='container__list--item__hover'>
-                                                                <img className='photo' src={partner.photo} alt='none'/>
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                            </div>
-                                        </Slide>
-                                    </> : <> <Slide index={0}>
-                                        <div className='container__list'>
-                                            {partnersMob1
-                                                .map((partner, index) => (
-                                                    <div key={index} className='container__list--item'>
-                                                        <div className='container__list--item__hover'>
-                                                            <img className='photo' src={partner.photo} alt='none'/>
-                                                        </div>
+                                                </div>
+                                            ))}
+                                    </div>
+                                </Slide>
+                                <Slide index={1}>
+                                    <div className='container__list'>
+                                        {partnersMob2
+                                            .map((partner, index) => (
+                                                <div key={index} className='container__list--item'>
+                                                    <div className='container__list--item__hover'>
+                                                        <img className='photo' src={partner.photo} alt='none'/>
                                                     </div>
-                                                ))}
-                                        </div>
-                                    </Slide>
-                                        <Slide index={1}>
-                                            <div className='container__list'>
-                                                {partnersMob2
-                                                    .map((partner, index) => (
-                                                        <div key={index} className='container__list--item'>
-                                                            <div className='container__list--item__hover'>
-                                                                <img className='photo' src={partner.photo} alt='none'/>
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                            </div>
-                                        </Slide>
-                                        <Slide index={2}>
-                                            <div className='container__list'>
-                                                {partnersMob3
-                                                    .map((partner, index) => (
-                                                        <div key={index} className='container__list--item'>
-                                                            <div className='container__list--item__hover'>
-                                                                <img className='photo' src={partner.photo} alt='none'/>
+                                                </div>
+                                            ))}
+                                    </div>
+                                </Slide>
+                                <Slide index={2}>
+                                    <div className='container__list'>
+                                        {partnersMob3
+                                            .map((partner, index) => (
+                                                <div key={index} className='container__list--item'>
+                                                    <div className='container__list--item__hover'>
+                                                        <img className='photo' src={partner.photo} alt='none'/>
                                                             </div>
                                                         </div>
                                                     ))}
@@ -294,10 +186,6 @@ const PartnersSection = () => {
                                         </Slide>
                                     </>
                                 }
-
-                            </>
-
-                        }
 
                     </Slider>
                     <div className="options">
