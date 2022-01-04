@@ -7,7 +7,7 @@ const LastSection = () => (
         </div>
         <div className="container">
             <form className='submit-form' action="">
-                <input placeholder='example@gimail.com' className='input' type="text"/>
+                <input placeholder='example@gmail.com' className='input' type="text"/>
                 <button className='button' type="submit">Submit</button>
             </form>
         </div>

@@ -93,7 +93,6 @@
     padding: 25px;
     background: url("../../assets/svg/home/startModal/modal-back.png") #F4F7FD no-repeat;
     background-size: cover;
-    overflow-y: scroll;
     @media(max-width: 600px) {
       overflow-y: inherit;
     }
