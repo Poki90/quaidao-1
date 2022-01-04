@@ -178,7 +178,7 @@ const TeamSection = () => {
                     (
                         <CarouselProvider
                             naturalSlideWidth={800}
-                            naturalSlideHeight={isMobileScreen ? 1600 : 1300}
+                            naturalSlideHeight={isMobileScreen ? 1620 : 1300}
                             totalSlides={isMobileScreen ? 4 : 2}
                             visibleSlides={1}
                         >

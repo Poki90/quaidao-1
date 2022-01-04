@@ -956,12 +956,12 @@
         grid-gap: 1rem;
         overflow: hidden;
         @media (max-width: 480px) {
-          grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+          grid-gap: 0;
+          grid-template-columns: repeat(4, minmax(90px, 1fr));
           padding-bottom: 60px;
           .iconicon8Icon {
             grid-column: 2 / span 1;
           }
-
           .iconicon9Icon {
             grid-column: 3 / span 1;
           }
@@ -1057,7 +1057,7 @@
               height: 74%;
               z-index: -21;
               left: 40px;
-              top: 83px;
+              top: 86px;
               border: 4px solid #0075FF;
 
               &:last-child {
@@ -1407,7 +1407,7 @@
           gap: 17px;
           flex-wrap: wrap;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
         }
 
         &--item {
