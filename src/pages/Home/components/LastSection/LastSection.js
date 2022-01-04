@@ -8,7 +8,9 @@ const LastSection = () => (
         <div className="container">
             <form className='submit-form' action="">
                 <input placeholder='example@gmail.com' className='input' type="text"/>
-                <button className='button' type="submit">Submit</button>
+               <div className='button--border'>
+                   <button className='button' type="submit">Submit</button>
+               </div>
             </form>
         </div>
     </div>

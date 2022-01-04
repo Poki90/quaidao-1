@@ -1,7 +1,8 @@
 import React from 'react';
 import Modal from "components/Modal";
 import {ReactSVG} from "react-svg";
-import logo from "assets/svg/home/startModal/logo.svg";
+import logo from 'assets/svg/header-logo.svg';
+
 import modBut1 from "assets/svg/home/startModal/modal-button-1.svg";
 import modBut2 from "assets/svg/home/startModal/modal-button-2.svg";
 import xIcon from "assets/svg/x.svg";

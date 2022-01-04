@@ -4,7 +4,7 @@ import {observer} from 'mobx-react-lite';
 import headerLogoSvg from '../../../assets/svg/header-logo.svg';
 import {DEFI_PROJECTS, MAIN_PAGE} from "config";
 import {Link, useLocation} from "react-router-dom";
-import {useMedia, useMobileDetect} from "hooks";
+import {useMedia} from "hooks";
 
 const headerConfig = [
     {
