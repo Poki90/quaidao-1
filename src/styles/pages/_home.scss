@@ -70,6 +70,7 @@
           flex-direction: column;
 
           .primary {
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
             font-family: Rubik, sans-serif;
             font-style: normal;
             font-weight: bold;
@@ -663,7 +664,7 @@
       }
 
       .gateway-DeFi__info {
-        max-width: 799px;
+        max-width: 850px;
         background: rgba(3, 0, 38, 0.45);
         border: 1px solid #0075FF;
         padding: 30px 23px;
@@ -1230,7 +1231,7 @@
   }
 
   .team-section {
-    padding: 15px 0 15px 0;
+    padding: 50px 0 50px 0;
     display: flex;
     align-items: center;
     justify-content: center;
