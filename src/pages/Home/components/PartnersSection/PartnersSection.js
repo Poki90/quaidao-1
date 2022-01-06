@@ -26,35 +26,39 @@ const partnersMob1 = [
     },
 
     {
-        photo: partner1917,
+        photo: partner1926,
     },
     {
-        photo: partner126592,
+        photo: partner1927,
     },
 ]
 const partnersMob2 = [
     {
-        photo: partner123653,
-    },
-    {
-        photo: partner125986,
+        photo: partner1917,
     },
     {
         photo: partner1925,
+
     },
     {
-        photo: partner1926,
-    },
-]
-const partnersMob3 = [
-    {
-        photo: partner1927,
+        photo: partner125248,
     },
     {
         photo: partner1928,
     },
+
+
+
+]
+const partnersMob3 = [
     {
-        photo: partner125248,
+        photo: partner125986,
+    },
+    {
+        photo: partner123653,
+    },
+    {
+        photo: partner126592,
     },
 ]
 

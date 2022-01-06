@@ -41,6 +41,18 @@
           background-repeat-y: none !important;
           background-size: contain !important;
           width: 101%;
+
+          position: relative;
+          &:before {
+            content: "";
+            height: 79%;
+            width: 100%;
+            box-shadow: 0 7px 20px 0 rgb(0 0 0 / 40%);
+            position: absolute;
+            top: 137px;
+            background: none;
+            z-index: 2;
+          }
           margin-left: -1%;
           background: transparent url("../../assets/images/bg right main.png") no-repeat bottom;
         }
@@ -99,7 +111,7 @@
             line-height: 87px;
             color: #F4F7FD;
             @media(max-width: 600px) {
-              font-size: 4.5625rem !important;
+              font-size: 60px !important;
               line-height: 87px;
             }
           }
@@ -115,8 +127,9 @@
               width: 100%;
               white-space: nowrap;
               padding-top: 0;
-              font-size: 35px;
-              line-height: 45px;
+              margin-top: -4px;
+              font-size: 34px;
+              line-height: 44px;
             }
             color: #F4F7FD;
 
@@ -405,7 +418,6 @@
       position: relative;
       z-index: 0;
       @media (max-width: 800px) {
-
         background: url("../../assets/images/main-right-mob.png") no-repeat bottom;
       }
 
@@ -672,6 +684,17 @@
         bottom: 0;
         padding-bottom: 21px;
         margin: 14px;
+
+        div {
+          div {
+            svg {
+              width: 100% !important;
+              height: 100% !important;
+              transform: scale(1.38);
+            }
+          }
+        }
+
         @media (max-width: 1200px) {
           margin: 0px;
         }
@@ -1068,6 +1091,7 @@
     background-size: cover;
     background-position: center;
     @media (max-width: 600px) {
+      background: url("../../assets/images/road-map-back-mob.png") #F4F7FD no-repeat;
       padding-top: 45px;
       height: auto;
     }
@@ -1401,7 +1425,6 @@
             text-align: center;
             cursor: pointer;
             position: relative;
-
             .ln-icon {
               position: absolute;
               top: 10px;
@@ -1412,6 +1435,8 @@
               transition: 1s;
               filter: grayscale(100%);
               @media (max-width: 600px) {
+                margin-bottom: -3px !important;
+                padding-bottom: -31px;
                 width: 168px !important;
                 height: 234px !important;
               }
@@ -1553,8 +1578,10 @@
               padding: 20px;
               background-size: cover;
               @media (max-width: 600px) {
-                width: 200px;
-                height: 120px;
+                width: auto;
+                max-width: 200px;
+                height: auto;
+                max-height: 120px;
                 transform: scale(0.9);
               }
             }
@@ -1687,41 +1714,6 @@
   }
 }
 
-//.container {
-//  display: flex;
-//  margin: 0 auto;
-//  flex-direction: column;
-//
-//  .items-container {
-//    flex-grow: 1;
-//    display: flex;
-//    flex-wrap: wrap;
-//    justify-content: space-between;
-//    overflow: auto;
-//
-//    .items-container__item {
-//      margin: 20px 0;
-//      max-width: 240px;
-//      background-position: center;
-//      flex: 0 0 1;
-//      font-family: Proxima Nova, sans-serif;
-//      font-style: normal;
-//      font-weight: 300;
-//      font-size: 24px;
-//      line-height: 140%;
-//      flex: none;
-//      order: 1;
-//      flex-grow: 0;
-//      color: #FFFFFF;
-//      @media (max-width: 480px) {
-//        flex: 0 0 50%;
-//        font-size: 18px;
-//      }
-//    }
-//  }
-//
-//
-//}
 .neon-anim {
   ellipse {
     animation: neon 1s ease-in-out infinite alternate;
