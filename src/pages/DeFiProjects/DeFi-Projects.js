@@ -99,7 +99,7 @@ const DeFiProjects = observer(() => {
                                     </div>
                                 </div>
                             ))}
-                            <div style={{height: 150}}></div>
+                            <div style={{height: 150}}/>
                         </div>
                     </div>
                 </div>

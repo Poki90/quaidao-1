@@ -2,12 +2,31 @@ import React, {useState} from 'react';
 import {slide as Menu} from 'react-burger-menu';
 import {ReactSVG} from 'react-svg';
 import {Link} from 'react-router-dom';
-import {DEFI_PROJECTS, socialsLinks} from 'config';
+import {DEFI_PROJECTS, MAIN_PAGE, socialsLinks} from 'config';
 
 import ambLogo from '../../assets/svg/header-logo.svg';
 import UiButton from "components/UiButton";
 import close from 'assets/svg/close.svg'
 
+
+const headerConfig = [
+    {
+        link: '/',
+        text: 'Governance',
+    },
+    {
+        link: DEFI_PROJECTS,
+        text: 'DeFi Projects',
+    },
+    {
+        link: `${MAIN_PAGE}Litepaper`,
+        text: 'Litepaper',
+    },
+    {
+        link: `${MAIN_PAGE}Community`,
+        text: 'Community',
+    },
+];
 const Sidebar = ({openModal}) => {
     const [open, setOpen] = useState(false);
 
@@ -44,23 +63,11 @@ const Sidebar = ({openModal}) => {
                     </UiButton>
                 </div>
             </div>
-            <a style={{marginTop: 191}} className="menu-item" target="_blank" href="https://ambrosus.io/">
-                <p>Governance</p>
-            </a>
-            <a
-                className="menu-item"
-                target="_blank"
-                href="https://explorer.ambrosus.io/"
-            >
-                <p>DeFi Projects</p>
-            </a>
-            <Link className="menu-item" to={DEFI_PROJECTS}>
-                <p>Litepaper</p>
-            </Link>
-            <a className="menu-item" href="https://amb.to/" target="_blank">
-                <p>Community
-                    QUAI DAO</p>
-            </a>
+            {headerConfig.map(({link, text},index) => (
+                <Link style={{marginTop:index === 0 && 191}} className="menu-item" to={link}>
+                    <p>{text}</p>
+                </Link>
+            ))}
             <div className="socials">
                 <ul className="socials__list">{socials}</ul>
             </div>
