@@ -8,7 +8,7 @@ import chipSvg from "assets/svg/home/chip.svg";
 import {useMedia} from "hooks";
 
 const SecondSection = ({openModal, startAnimation}) => {
-    const isSmall = useMedia('(min-width: 1224px)');
+    const isSmall = useMedia('(min-width: 1300px)');
 
     return (
         <div className="second-section">
@@ -34,7 +34,7 @@ const SecondSection = ({openModal, startAnimation}) => {
                                     culpa
                                     qui officia deserunt mollit anim id est laborum.</p>
                             </div>
-                            <div className="staking-button" style={{zIndex: 0}}>
+                            <div className="staking-buttonn" style={{zIndex: 0}}>
                                 <UiButton priority='primary' type='button' onclick={openModal}><p>Cohort farming</p>
                                 </UiButton>
                             </div>
@@ -43,10 +43,9 @@ const SecondSection = ({openModal, startAnimation}) => {
                 </div>}
                 rightChildren={
                     <div className="second-section__right-part">
-                        <div style={{transform:!isSmall && 'scale(2)'}} className='chip'><ReactSVG src={chipSvg}
-                                                        wrapper='div'/>
-                        </div>
-                        <div className="top-section__right-part__heading-button"/>
+                        {isSmall && <div className='chip'><ReactSVG src={chipSvg}
+                                                                    wrapper='div'/>
+                        </div>}
                     </div>
                 }/>
         </div>

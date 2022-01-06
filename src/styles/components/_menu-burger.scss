@@ -17,9 +17,8 @@
 
 .bm-burger-button {
   position: absolute;
-  transform: scale(1.9);
-  width: 18px;
-  height: 20px;
+  width: 34px;
+  height: 24px;
   right: 35px;
   top: 60px;
   @media (min-width: 1410px) {
@@ -27,8 +26,8 @@
 
   }
   @media (max-width: 1410px) {
-    right: 6%;
-    top: 65px;
+    right: 5%;
+    top: 44px;
     display: block;
 
   }
@@ -105,7 +104,6 @@
 .menu-item {
   position: relative;
   margin-top: 50px;
-  text-transform: uppercase;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;

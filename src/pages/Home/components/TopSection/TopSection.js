@@ -45,7 +45,7 @@ const TopSection = ({openModal}) => {
                 rightChildren={
                     <div className="top-section__right-part">
                         <div className='top-eclipse'>
-                            <img src={!isDesktop ? topImage : topImageMobile} alt='top logo'/>
+                            {!isDesktop && <img src={topImage} alt='top logo'/>}
                             <a href="https://google.com" target="_blank" className="one"/>
                             <a href="https://google.com" target="_blank" className="two"/>
                             <a href="https://google.com" target="_blank" className="three"/>

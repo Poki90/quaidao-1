@@ -154,8 +154,8 @@ const teamMembersMob2 = [
 ];
 
 const TeamSection = () => {
-    const isSmall = useMedia('(max-width: 900px)');
-    const isMobileScreen = useMedia('(max-width: 450px)');
+    const isSmall = useMedia('(max-width: 450px)');
+    const isMobileScreen = useMedia('(max-width: 350px)');
     return (
         <div className="team-section">
             <div className='team-section__title'>TEAM</div>
@@ -178,7 +178,7 @@ const TeamSection = () => {
                     (
                         <CarouselProvider
                             naturalSlideWidth={800}
-                            naturalSlideHeight={isMobileScreen ? 1620 : 1300}
+                            naturalSlideHeight={isMobileScreen ? 1620 : 1600}
                             totalSlides={isMobileScreen ? 4 : 2}
                             visibleSlides={1}
                         >
