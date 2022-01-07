@@ -281,9 +281,10 @@
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
-    background: url("../../assets/images/QUAI KEY METRICS-bg mob.png") bottom no-repeat;
+    background: url("../../assets/images/QUAI KEY METRICS-bg.png") bottom no-repeat;
     height: 733px;
     @media (max-width: 600px) {
+      background: url("../../assets/images/QUAI KEY METRICS-bg mob.png") bottom no-repeat;
       height: auto;
       padding: 50px 0 140px 0;
     }
@@ -416,7 +417,7 @@
   }
 
   .projects {
-    padding: 50px 0;
+    padding: 80px 0 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
