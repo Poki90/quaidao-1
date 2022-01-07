@@ -48,7 +48,7 @@ const projects = [
 const Projects = () => {
     const isSmall = useMedia('(max-width: 600px)');
 
-    return(
+    return (
         <>
             <div className='projects'>
                 <div className="projects__heading">
@@ -64,7 +64,7 @@ const Projects = () => {
                                     <div className='project-item-title'>{p.title}</div>
                                     <div className='project-item-describe'>
                                         {p.description}                                                    </div>
-                                    <div className='project-item-btn'>Explore</div>
+                                    <button className='project-item-btn'><p>Explore</p></button>
                                 </div>
                                 <div className='project-item-photo-outline'>
                                     <img src={p.src} alt={p.title}/>
@@ -74,7 +74,7 @@ const Projects = () => {
                     </div>
                 </div>
             ))}
-            <div style={{height:!isSmall ? 150 : 50}}/>
+            <div style={{height: !isSmall ? 150 : 50}}/>
         </>
     );
 }

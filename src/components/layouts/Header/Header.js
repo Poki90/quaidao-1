@@ -31,7 +31,7 @@ export const Header = observer(() => {
     return (
         <div className="header">
             <div className='menu'>
-                <ReactSVG style={{marginTop:!isSmall && 40}} src={headerLogoSvg} wrapper='span'/>
+                <ReactSVG style={{marginTop:!isSmall && pathname === '/' && 40}} src={headerLogoSvg} wrapper='span'/>
                 {isSmall && headerConfig.map(({link, text}) => (
                     <div className='menu-link' key={text}>
                         <Link to={link}>{text}</Link>

@@ -511,22 +511,66 @@
               padding-bottom: 15px;
             }
 
+            position: relative;
+            z-index: 21;
+
             .project-item-btn {
-              margin-top: auto;
-              width: 162px;
-              height: 52px;
-              border: 1px solid #005BBC;
-              box-sizing: border-box;
-              border-radius: 6px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-family: Rubik, sans-serif;
+              font-family: Rubik, serif;
               font-style: normal;
               font-weight: bold;
               font-size: 24px;
               line-height: 28px;
               color: #005BBC;
+              z-index: 22212121;
+              width: 162px;
+              height: 52px;
+              border: 1px solid #005BBC;
+              box-sizing: border-box;
+              border-radius: 6px;
+              margin-top: 25px;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: #F4F7FD;
+              transition: all .35s;
+              position: relative;
+
+              &:after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                border-radius: 4px;
+                z-index: 212;
+                width: 0;
+                height: 100%;
+                background: #0022A7;
+                border: 0 !important;
+                transition: all .35s;
+              }
+
+              &:hover {
+                color: #fff !important;
+                border: 0 !important;
+                z-index: 2;
+              }
+
+              &:hover::after {
+                width: 100%;
+                z-index: 2;
+                border: 0 !important;
+              }
+
+              p {
+                position: relative;
+                z-index: 333;
+                font-style: normal;
+                font-weight: bold;
+                font-family: Rubik, sans-serif;
+                font-size: 24px;
+                line-height: 28px;
+              }
             }
           }
 
