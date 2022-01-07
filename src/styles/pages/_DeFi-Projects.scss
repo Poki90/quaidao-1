@@ -21,6 +21,9 @@
       .left {
         background-size: contain;
         background: url("../../assets/images/header mob-sidebar.png") no-repeat center;
+        @media(max-width: 600px) {
+          background-size: cover;
+        }
       }
 
       .right {
@@ -82,6 +85,12 @@
     flex-direction: column;
     min-height: 100vh;
     background: url("../../assets/images/background-defi-top.png");
+    @media (max-width: 600px) {
+      background: url("../../assets/images/background-defi-top-mob.png") no-repeat top;
+      background-size: cover;
+      padding: 65px 15px;
+
+    }
 
     &__heading {
       display: flex;
@@ -97,6 +106,11 @@
         line-height: 57px;
         color: #005BBC;
         padding-bottom: 20px;
+        @media (max-width: 600px) {
+          font-size: 36px;
+          line-height: 43px;
+        }
+
       }
 
 
@@ -108,6 +122,10 @@
         line-height: 36px;
         color: #000000;
         padding-bottom: 40px;
+        @media (max-width: 600px) {
+          font-size: 18px;
+          line-height: 21px;
+        }
 
         span {
           font-family: Rubik, serif;
@@ -116,12 +134,20 @@
           font-size: 30px;
           line-height: 36px;
           color: #0024E5;
+          @media (max-width: 600px) {
+            font-size: 18px;
+            line-height: 21px;
+          }
         }
       }
     }
 
     .container {
       gap: 60px;
+      @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 28px;
+      }
 
       .token-list {
         width: 100%;
@@ -129,6 +155,9 @@
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
+        @media (max-width: 600px) {
+          gap: 25px;
+        }
 
         .token-list-item-right {
           display: flex;
@@ -181,6 +210,9 @@
           width: 100%;
           gap: 19px;
           flex-direction: row-reverse;
+          @media (max-width: 600px) {
+            align-items: center;
+          }
 
           .token-list-item-info {
             display: flex;
@@ -188,11 +220,16 @@
             align-items: flex-start;
             justify-content: flex-start;
 
+
             .token-list-item-info-title {
               white-space: inherit;
               text-align: left;
               max-width: 300px;
               height: auto;
+              @media (max-width: 600px) {
+                font-size: 16px;
+                line-height: 19px;
+              }
             }
 
             .token-list-item-info-price {
@@ -203,6 +240,10 @@
               font-size: 20px;
               line-height: 24px;
               color: #005BBC;
+              @media (max-width: 600px) {
+                font-size: 16px;
+                line-height: 19px;
+              }
             }
           }
 
@@ -225,7 +266,10 @@
         height: 0;
         background: url("../../assets/images/Tokenomics.png") no-repeat center;
         background-size: contain;
-        padding-top: 34%
+        padding-top: 34%;
+        @media (max-width: 600px) {
+          padding-top: 100%;
+        }
       }
     }
 
@@ -237,10 +281,11 @@
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
-    background: url("../../assets/images/QUAI KEY METRICS-bg.png") bottom no-repeat;
+    background: url("../../assets/images/QUAI KEY METRICS-bg mob.png") bottom no-repeat;
     height: 733px;
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
       height: auto;
+      padding: 50px 0 140px 0;
     }
 
     &__heading {
@@ -257,16 +302,29 @@
         line-height: 57px;
         color: #005BBC;
         padding-bottom: 60px;
+        @media (max-width: 600px) {
+          font-size: 36px;
+          line-height: 43px;
+        }
+
       }
     }
 
     .container {
+      @media (max-width: 600px) {
+        flex-direction: column;
+        justify-content: center;
+      }
 
       .metrics-list {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         gap: 45px;
+        @media (max-width: 600px) {
+          flex-direction: column;
+          justify-content: center;
+        }
 
         &__item-outline {
           width: 370px;
@@ -380,6 +438,10 @@
         line-height: 57px;
         color: #005BBC;
         padding-bottom: 20px;
+        @media (max-width: 600px) {
+          font-size: 36px;
+          line-height: 43px;
+        }
       }
     }
   }
@@ -395,6 +457,9 @@
 
     .container {
       gap: 60px;
+      @media (max-width: 600px) {
+        padding: 0 15px !important;
+      }
 
       .projects-list {
         width: 100%;
@@ -408,13 +473,19 @@
           display: flex;
           flex-direction: row;
           gap: 60px;
+          @media (max-width: 600px) {
+            flex-direction: column;
+            gap: 30px;
+          }
 
           .project-item-info {
             width: 40%;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
-
+            @media (max-width: 600px) {
+              width: 100%;
+            }
             .project-item-title {
               font-family: Rubik, sans-serif;
               font-style: normal;
@@ -434,6 +505,8 @@
                 line-height: 25px;
                 color: #000000;
               }
+
+              padding-bottom: 15px;
             }
 
             .project-item-btn {
@@ -452,7 +525,6 @@
               font-size: 24px;
               line-height: 28px;
               color: #005BBC;
-
             }
           }
 
@@ -463,7 +535,10 @@
             box-sizing: border-box;
             border-radius: 18px;
             position: relative;
-
+            @media (max-width: 600px) {
+              width: 98%;
+              height: 182px;
+            }
             img {
               width: 100%;
               height: inherit;
@@ -474,6 +549,11 @@
               bottom: 0;
               border-radius: 18px;
               box-shadow: -4px 8px 11px rgba(0, 0, 0, 0.43), inset 0px 5px 5px #FFFFFF;
+              @media (max-width: 600px) {
+                width: 100%;
+                top: 10px;
+                left: 10px;
+              }
             }
           }
         }

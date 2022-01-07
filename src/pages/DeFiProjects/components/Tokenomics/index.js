@@ -1,4 +1,5 @@
 import React from 'react';
+import {useMedia} from "hooks";
 const tokenomics = [
     {
         text: '5% For IDO On Binance Smartchain',
@@ -50,58 +51,63 @@ const tokenomics = [
     },
 ]
 
-const Tokenomics = () => (
-    <div className="tokenomics">
-        <div className="tokenomics__heading">
-            <div className="tokenomics__heading__title">TOKENOMICS</div>
-            <div className="tokenomics__heading__description">TOTAL
-                SUPPLY: <span>100 000 000</span></div>
-        </div>
-        <div className="container">
-            <div className="token-list">
-                {tokenomics
-                    .filter(token => token.idx < 5)
-                    .map(t => (
-                        <div className="token-list-item-right">
-                            <div className="token-list-item-info">
-                                <div className="token-list-item-info-title">
-                                    {t.text}
-                                </div>
-                                <div className="token-list-item-info-price">
-                                    {t.count}
-                                </div>
-                            </div>
-                            <div className="token-list-item-icon"
-                                 style={{backgroundColor: t.color}}>
-                                <div className="colored-shadow"></div>
-                            </div>
-                        </div>
-                    ))
-                }
+const Tokenomics = () => {
+    const isSmall = useMedia('(max-width: 600px)');
+    console.log('isSmall Tokenomics', isSmall);
+    return (
+        <div className="tokenomics">
+            <div className="tokenomics__heading">
+                <div className="tokenomics__heading__title">TOKENOMICS</div>
+                <div className="tokenomics__heading__description">TOTAL
+                    SUPPLY: <span>100 000 000</span></div>
             </div>
-            <div className="center-image"/>
-            <div className="token-list">
-                {tokenomics
-                    .filter(token => token.idx > 4)
-                    .map(t => (
-                        <div className="token-list-item-left">
-                            <div className="token-list-item-info">
-                                <div className="token-list-item-info-title">
-                                    {t.text}
+            <div className="container">
+                {!isSmall && <div className="token-list">
+                    {tokenomics
+                        .filter(token => token.idx < 5)
+                        .map(t => (
+                            <div className="token-list-item-right">
+                                <div className="token-list-item-info">
+                                    <div className="token-list-item-info-title">
+                                        {t.text}
+                                    </div>
+                                    <div className="token-list-item-info-price">
+                                        {t.count}
+                                    </div>
                                 </div>
-                                <div className="token-list-item-info-price">
-                                    {t.count}
+                                <div className="token-list-item-icon"
+                                     style={{backgroundColor: t.color}}>
+                                    <div className="colored-shadow"></div>
                                 </div>
                             </div>
-                            <div className="token-list-item-icon"
-                                 style={{backgroundColor: t.color}}>
-                            </div>
-                        </div>
-                    ))
+                        ))
+                    }
+                </div>
                 }
+                <div className="center-image"/>
+                <div className="token-list">
+                    {tokenomics
+                        .filter(token =>!isSmall ? token.idx > 4 : token)
+                        .map(t => (
+                            <div className="token-list-item-left">
+                                <div className="token-list-item-info">
+                                    <div className="token-list-item-info-title">
+                                        {t.text}
+                                    </div>
+                                    <div className="token-list-item-info-price">
+                                        {t.count}
+                                    </div>
+                                </div>
+                                <div className="token-list-item-icon"
+                                     style={{backgroundColor: t.color}}>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </div>
-    </div>
-);
+    );
+}
 
 export default Tokenomics;
