@@ -125,6 +125,7 @@
         @media (max-width: 600px) {
           font-size: 18px;
           line-height: 21px;
+          padding-bottom: 15%;
         }
 
         span {
@@ -198,8 +199,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 6px;
-            box-shadow: 0 0px 0px 6px #F4F7FD, -4px 8px 11px rgba(133, 131, 131, 0.43), 0px 5px 5px #FFFFFF
+            border-radius: 3px;
+            box-shadow: 0 0px 0px 7px #f4f7fd, -9px 6px 7px rgb(133 131 131 / 52%), 14px 12px 7px #ffffff, inset 0px 4px 4px rgb(0 0 0 / 25%);
           }
         }
 
@@ -254,8 +255,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 6px;
-            box-shadow: 0 0px 0px 6px #F4F7FD, -4px 8px 11px rgba(133, 131, 131, 0.43), 0px 5px 5px #FFFFFF
+            border-radius: 3px;
+            box-shadow: 0 0px 0px 7px #f4f7fd, -9px 6px 7px rgb(133 131 131 / 52%), 14px 12px 7px #ffffff, inset 0px 4px 4px rgb(0 0 0 / 25%);
           }
         }
 
@@ -325,6 +326,7 @@
         @media (max-width: 600px) {
           flex-direction: column;
           justify-content: center;
+          gap: 102px;
         }
 
         &__item-outline {
@@ -476,7 +478,7 @@
           gap: 60px;
           @media (max-width: 600px) {
             flex-direction: column;
-            gap: 30px;
+            gap: 24px;
           }
 
           .project-item-info {
