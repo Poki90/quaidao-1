@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: row;
     z-index: 3;
-
+    filter: drop-shadow(0px 1px 31px rgba(0, 0, 0, 0.58));
     .render-responsive-blocks {
       background: url("../../assets/images/header-back.png") transparent no-repeat;
       @media(max-width: 600px) {
@@ -83,10 +83,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 100vh;
+    height: 790px;
     background: url("../../assets/images/background-defi-top.png");
     @media (max-width: 600px) {
       background: url("../../assets/images/background-defi-top-mob.png") no-repeat top;
+      height: 100%;
       background-size: cover;
       padding: 65px 15px;
 
@@ -200,7 +201,7 @@
             align-items: center;
             justify-content: center;
             border-radius: 3px;
-            box-shadow: 0 0px 0px 7px #f4f7fd, -9px 6px 7px rgb(133 131 131 / 52%), 14px 12px 7px #ffffff, inset 0px 4px 4px rgb(0 0 0 / 25%);
+            box-shadow: 0 0px 0px 7px #f4f7fd, -7px 7px 55px #858383, 5px 13px 7px #ffffff, inset 0px 4px 5px rgb(0 0 0 / 25%);
           }
         }
 
@@ -256,7 +257,7 @@
             align-items: center;
             justify-content: center;
             border-radius: 3px;
-            box-shadow: 0 0px 0px 7px #f4f7fd, -9px 6px 7px rgb(133 131 131 / 52%), 14px 12px 7px #ffffff, inset 0px 4px 4px rgb(0 0 0 / 25%);
+            box-shadow: 0 0px 0px 7px #f4f7fd, -7px 7px 55px #858383, 5px 13px 7px #ffffff, inset 0px 4px 5px rgb(0 0 0 / 25%);
           }
         }
 
@@ -532,7 +533,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              background: #F4F7FD;
+              background: transparent;
               transition: all .35s;
               position: relative;
 

@@ -1146,6 +1146,7 @@
               height: 74%;
               z-index: -21;
               left: 40px;
+              background-color: #0075FF;
               top: 86px;
               border: 4px solid #0075FF;
 
@@ -1163,12 +1164,16 @@
             left: 84px;
             z-index: -21;
             top: 38px;
+            background-color: #0075FF;
+
             border: 4px solid #0075FF;
             @media (max-width: 600px) {
               content: '';
               position: absolute;
               width: 0;
               height: 66% !important;
+              background-color: #0075FF;
+
               z-index: -21;
               left: 40px;
               top: 86px;
@@ -1245,6 +1250,7 @@
             position: absolute;
             width: 200%;
             height: 0;
+            background-color: #fff;
             left: 84px;
             z-index: -21;
             top: 38px;
@@ -1436,6 +1442,7 @@
               filter: grayscale(100%);
               @media (max-width: 600px) {
                 margin-bottom: -3px !important;
+                padding: 0px 4px 3px 4px;
                 padding-bottom: -31px;
                 width: 168px !important;
                 height: 234px !important;
