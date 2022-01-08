@@ -1428,10 +1428,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            max-height: 260px;
             text-align: center;
             cursor: pointer;
             position: relative;
-            .ln-icon {
+            @media (max-width: 600px) {
+              max-height: 231px;
+              min-height: 231px;
+            }
+              .ln-icon {
               position: absolute;
               top: 10px;
               right: 10px;
@@ -1442,7 +1447,7 @@
               filter: grayscale(100%);
               @media (max-width: 600px) {
                 margin-bottom: -3px !important;
-                padding: 0px 4px 3px 4px;
+                padding: 0px 4px 3px 4px !important;
                 padding-bottom: -31px;
                 width: 168px !important;
                 height: 234px !important;

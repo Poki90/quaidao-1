@@ -5,7 +5,7 @@ import AnatoliiShaitanov from "assets/images/members/Anatolii Shaitanov.png";
 import JeffreyCommons from "assets/images/members/Jeffrey Commons.png";
 import RuslanGavriljuk from "assets/images/members/Ruslan Gavriljuk.png";
 import RomanFerlii from "assets/images/members/Roman Ferlii.png";
-import Davien from "assets/images/members/Davien.png";
+import Davien from "assets/images/members/Davien color.png";
 import VictorYampolsky from "assets/images/members/Victor Yampolsky.png";
 
 import {useMedia} from "hooks";
@@ -15,55 +15,6 @@ import prevSlide from "assets/svg/prevSlide.svg";
 import nextSlide from "assets/svg/nextSlide.svg";
 import lnIcon from 'assets/images/members/lnIcon.svg'
 
-const teamMembersForPhone1 = [
-    {
-        photo: VictorYampolsky,
-        fullName: 'Victor Yampolsky',
-        description: 'Advisor/Contributor, Business Development and Growth',
-    },
-    {
-        photo: FelipeDeAnda,
-        fullName: 'Felipe De Anda',
-        description: 'Co-Founder, Senior Manager Growth and Development',
-    },
-]
-const teamMembersForPhone2 = [
-    {
-        photo: StefanArsenijevic,
-        fullName: 'Stefan Arsenijevic',
-        description: 'Web Developer and SEO Expert',
-    },
-    {
-        photo: AnatoliiShaitanov,
-        fullName: 'Anatolii Shaitanov',
-        description: 'Senior UI/UX Designer',
-    },
-]
-const teamMembersForPhone3 = [
-    {
-        photo: JeffreyCommons,
-        fullName: 'Jeffrey Commons',
-        description: 'Co-Founder,  Senior Solidity Developer and Smart Contracts Architrct',
-    },
-    {
-        photo: Davien,
-        fullName: 'Davien',
-        description: 'p2e Specialist',
-    },
-
-]
-const teamMembersForPhone4 = [
-    {
-        photo: RuslanGavriljuk,
-        fullName: 'Ruslan Gavriljuk',
-        description: 'Front-end Developer',
-    },
-    {
-        photo: RomanFerlii,
-        fullName: 'Roman Ferlii',
-        description: 'UI/UX Designer',
-    },
-]
 const teamMembers = [
     {
         photo: VictorYampolsky,
@@ -166,7 +117,7 @@ const TeamSection = () => {
                             <div className='container__list--item' key={member.fullName}>
                                 <div className='photo'>
                                     <ReactSVG className='ln-icon' src={lnIcon} wrapper='span'/>
-                                    <img style={{marginTop: member.fullName === 'Davien' && 4}} src={member.photo}
+                                    <img style={{margin: member.fullName === 'Davien' ? '15px 0px 13px' : '15px 0px 21px'}} src={member.photo}
                                          alt={member.fullName}/>
                                 </div>
                                 <div className='fullName'>{member.fullName}</div>
@@ -183,119 +134,45 @@ const TeamSection = () => {
                             visibleSlides={1}
                         >
                             <Slider>
-                                {!isMobileScreen ?
-                                    <>
-                                        <Slide index={0}>
-                                            <div className='container__list'>
-                                                {teamMembersMob1
-                                                    .map((member) => (
-                                                        <div className='container__list--item' key={member.fullName}>
-                                                            <div className='photo'>
-                                                                <ReactSVG className='ln-icon' src={lnIcon}
-                                                                          wrapper='span'/>
-                                                                <img
-                                                                    style={{marginTop: member.fullName === 'Davien' && 4}}
-                                                                    src={member.photo} alt={member.fullName}/>
-                                                            </div>
-                                                            <div className='fullName'>{member.fullName}</div>
-                                                            <div className='description'>{member.description}</div>
+                                <>
+                                    <Slide index={0}>
+                                        <div className='container__list'>
+                                            {teamMembersMob1
+                                                .map((member) => (
+                                                    <div className='container__list--item' key={member.fullName}>
+                                                        <div className='photo'>
+                                                            <ReactSVG className='ln-icon' src={lnIcon}
+                                                                      wrapper='span'/>
+                                                            <img
+                                                                style={{marginTop: member.fullName === 'Davien' ? 6 : -6}}
+                                                                src={member.photo} alt={member.fullName}/>
                                                         </div>
-                                                    ))}
-                                            </div>
-                                        </Slide>
-                                        <Slide index={1}>
-                                            <div className='container__list'>
-                                                {teamMembersMob2
-                                                    .map((member) => (
-                                                        <div className='container__list--item' key={member.fullName}>
-                                                            <div className='photo'>
-                                                                <ReactSVG className='ln-icon' src={lnIcon}
-                                                                          wrapper='span'/>
-                                                                <img
-                                                                    style={{marginTop: member.fullName === 'Davien' && 4}}
-                                                                    src={member.photo} alt={member.fullName}/>
-                                                            </div>
-                                                            <div className='fullName'>{member.fullName}</div>
-                                                            <div className='description'>{member.description}</div>
+                                                        <div className='fullName'>{member.fullName}</div>
+                                                        <div className='description'>{member.description}</div>
+                                                    </div>
+                                                ))}
+                                        </div>
+                                    </Slide>
+                                    <Slide index={1}>
+                                        <div className='container__list'>
+                                            {teamMembersMob2
+                                                .map((member,index) => (
+                                                    <div className='container__list--item' key={member.fullName}>
+                                                        <div className='photo'>
+                                                            <ReactSVG className='ln-icon' src={lnIcon}
+                                                                      wrapper='span'/>
+                                                            <img
+                                                                style={{marginTop: member.fullName === 'Davien' ? 6 : -6}}
+                                                                src={member.photo} alt={member.fullName}/>
                                                         </div>
-                                                    ))}
-                                            </div>
-                                        </Slide>
-                                    </> :
-                                    <>
-                                        <Slide index={0}>
-                                            <div className='container__list'>
-                                                {teamMembersForPhone1
-                                                    .map((member) => (
-                                                        <div className='container__list--item' key={member.fullName}>
-                                                            <div className='photo'>
-                                                                <ReactSVG className='ln-icon' src={lnIcon}
-                                                                          wrapper='span'/>
-                                                                <img
-                                                                    style={{marginTop: member.fullName === 'Davien' && 4}}
-                                                                    src={member.photo} alt={member.fullName}/>
-                                                            </div>
-                                                            <div className='fullName'>{member.fullName}</div>
-                                                            <div className='description'>{member.description}</div>
-                                                        </div>
-                                                    ))}
-                                            </div>
-                                        </Slide>
-                                        <Slide index={1}>
-                                            <div className='container__list'>
-                                                {teamMembersForPhone2
-                                                    .map((member) => (
-                                                        <div className='container__list--item' key={member.fullName}>
-                                                            <div className='photo'>
-                                                                <ReactSVG className='ln-icon' src={lnIcon}
-                                                                          wrapper='span'/>
-                                                                <img
-                                                                    style={{marginTop: member.fullName === 'Davien' && 4}}
-                                                                    src={member.photo} alt={member.fullName}/>
-                                                            </div>
-                                                            <div className='fullName'>{member.fullName}</div>
-                                                            <div className='description'>{member.description}</div>
-                                                        </div>
-                                                    ))}
-                                            </div>
-                                        </Slide>
-                                        <Slide index={2}>
-                                            <div className='container__list'>
-                                                {teamMembersForPhone3
-                                                    .map((member) => (
-                                                        <div className='container__list--item' key={member.fullName}>
-                                                            <div className='photo'>
-                                                                <ReactSVG className='ln-icon' src={lnIcon}
-                                                                          wrapper='span'/>
-                                                                <img
-                                                                    style={{marginTop: member.fullName === 'Davien' && 4}}
-                                                                    src={member.photo} alt={member.fullName}/>
-                                                            </div>
-                                                            <div className='fullName'>{member.fullName}</div>
-                                                            <div className='description'>{member.description}</div>
-                                                        </div>
-                                                    ))}
-                                            </div>
-                                        </Slide>
-                                        <Slide index={3}>
-                                            <div className='container__list'>
-                                                {teamMembersForPhone4
-                                                    .map((member) => (
-                                                        <div className='container__list--item' key={member.fullName}>
-                                                            <div className='photo'>
-                                                                <ReactSVG className='ln-icon' src={lnIcon}
-                                                                          wrapper='span'/>
-                                                                <img
-                                                                    style={{marginTop: member.fullName === 'Davien' && 4}}
-                                                                    src={member.photo} alt={member.fullName}/>
-                                                            </div>
-                                                            <div className='fullName'>{member.fullName}</div>
-                                                            <div className='description'>{member.description}</div>
-                                                        </div>
-                                                    ))}
-                                            </div>
-                                        </Slide>
-                                    </>}
+                                                        <div className='fullName'>{member.fullName}</div>
+                                                        <div className='description'>{member.description}</div>
+                                                    </div>
+                                                ))}
+                                        </div>
+                                    </Slide>
+                                </>
+                                }
 
 
                             </Slider>
