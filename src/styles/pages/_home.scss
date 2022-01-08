@@ -419,6 +419,8 @@
       z-index: 0;
       @media (max-width: 800px) {
         background: url("../../assets/images/main-right-mob.png") no-repeat bottom;
+        background-size: contain !important;
+
       }
 
 
@@ -1416,7 +1418,7 @@
           width: 210px;
           gap: 10px;
           @media (max-width: 600px) {
-            width: 168px;
+            width: 162px;
             height: 420px;
           }
 
@@ -1433,8 +1435,9 @@
             cursor: pointer;
             position: relative;
             @media (max-width: 600px) {
-              max-height: 231px;
-              min-height: 231px;
+              max-height: 205px;
+              height: 205px;
+              min-height: 205px;
             }
               .ln-icon {
               position: absolute;
@@ -1449,8 +1452,8 @@
                 margin-bottom: -3px !important;
                 padding: 0px 4px 3px 4px !important;
                 padding-bottom: -31px;
-                width: 168px !important;
-                height: 234px !important;
+                width: 165px !important;
+                height: 205px !important;
               }
 
             }

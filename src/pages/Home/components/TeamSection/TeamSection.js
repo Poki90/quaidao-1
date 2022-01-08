@@ -162,7 +162,10 @@ const TeamSection = () => {
                                                             <ReactSVG className='ln-icon' src={lnIcon}
                                                                       wrapper='span'/>
                                                             <img
-                                                                style={{marginTop: member.fullName === 'Davien' ? 6 : -6}}
+                                                                style={{
+                                                                    marginBottom: index === 1 ? -10 : -10,
+                                                                    marginTop: index === 1 ? 7 : -5
+                                                                }}
                                                                 src={member.photo} alt={member.fullName}/>
                                                         </div>
                                                         <div className='fullName'>{member.fullName}</div>
@@ -172,9 +175,6 @@ const TeamSection = () => {
                                         </div>
                                     </Slide>
                                 </>
-                                }
-
-
                             </Slider>
                             <div className="options">
                                 <ButtonBack><ReactSVG src={prevSlide} wrapper='span'/></ButtonBack>
