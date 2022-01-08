@@ -12,7 +12,12 @@ const GatewayDeFi = () => {
     return (
         <div className='gateway-DeFi'>
             <div className='bitcoin-chain'>
-                <ReactSVG src={!isSmall ? bitook : bitookMobile} wrapper='div'/>
+                <object
+                    type="image/svg+xml"
+                    height="70"
+                    width="150"
+                    data={!isSmall ? bitook : bitookMobile} >
+                </object>
             </div>
             <div className='container'>
                 <div className='gateway-DeFi__title'>

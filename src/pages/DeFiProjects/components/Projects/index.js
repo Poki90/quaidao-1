@@ -60,13 +60,14 @@ const Projects = () => {
                     <div className="container">
                         <div className="projects-list">
                             <div className="projects-list--item">
-                                <div style={{order: !isSmall && index % 2 ? 0 : 1}} className='project-item-info'>
+                                <div style={{order: !isSmall && index % 2 ? 1 : 0}} className='project-item-info'>
                                     <div className='project-item-title'>{p.title}</div>
                                     <div className='project-item-describe'>
                                         {p.description}                                                    </div>
                                     <button className='project-item-btn'><p>Explore</p></button>
                                 </div>
-                                <div className='project-item-photo-outline'>
+                                <div style={{order: !isSmall && index % 2 ? 0 : 0}}
+                                     className='project-item-photo-outline'>
                                     <img src={p.src} alt={p.title}/>
                                 </div>
                             </div>

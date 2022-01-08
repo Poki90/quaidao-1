@@ -487,6 +487,7 @@
             align-items: flex-start;
             flex-direction: column;
             @media (max-width: 600px) {
+              order: 1!important;
               width: 100%;
             }
             .project-item-title {
@@ -576,6 +577,7 @@
           }
 
           .project-item-photo-outline {
+
             width: 60%;
             height: 360px;
             border: 1px solid #005BBC;
