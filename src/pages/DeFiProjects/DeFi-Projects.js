@@ -11,6 +11,7 @@ import Tokenomics from "./components/Tokenomics";
 import QuaiKeyMetrics from "pages/DeFiProjects/components/QuaiKeyMetrics";
 import FirstSection from "pages/DeFiProjects/components/FirstSection";
 import Projects from "pages/DeFiProjects/components/Projects";
+import StartModal from "pages/Home/components/StartModal";
 
 const DeFiProjects = observer(() => {
     const [data] = useContext(DataContext);
@@ -27,6 +28,9 @@ const DeFiProjects = observer(() => {
         <>
             <div className="layout">
                 <div className="content">
+                    <StartModal
+                        isShowing={isStartModalShow}
+                        toggle={toggleStartModalShow}/>
                     <div className="page">
                         <div className="defi-page" id="defi-page">
                             <Sidebar pageWrapId="root" outerContainerId="root"/>
