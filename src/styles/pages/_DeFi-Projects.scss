@@ -579,29 +579,27 @@
           .project-item-photo-outline {
 
             width: 60%;
-            height: 360px;
-            border: 1px solid #005BBC;
+            min-height: 360px;
+            height: 100%;
             box-sizing: border-box;
-            border-radius: 18px;
             position: relative;
+            left: 10px;
+
             @media (max-width: 600px) {
               width: 98%;
               height: 182px;
             }
             img {
               width: 100%;
-              height: inherit;
+              height: 100%!important;
               position: absolute;
-              top: 20px;
-              left: 20px;
+              top: 0;
+              left: 0;
               right: 0;
               bottom: 0;
-              border-radius: 18px;
-              box-shadow: -4px 8px 11px rgba(0, 0, 0, 0.43), inset 0px 5px 5px #FFFFFF;
               @media (max-width: 600px) {
                 width: 100%;
                 top: 10px;
-                left: 10px;
               }
             }
           }

@@ -66,7 +66,10 @@ const Projects = () => {
                                         {p.description}                                                    </div>
                                     <button className='project-item-btn'><p>Explore</p></button>
                                 </div>
-                                <div style={{order: !isSmall && index % 2 ? 0 : 0}}
+                                <div style={{
+                                    order: !isSmall && index % 2 ? 0 : 0,
+                                    height: index === 5 && !isSmall ? 450 : 214
+                                }}
                                      className='project-item-photo-outline'>
                                     <img src={p.src} alt={p.title}/>
                                 </div>
