@@ -68,7 +68,7 @@ const Projects = () => {
                                 </div>
                                 <div style={{
                                     order: !isSmall && index % 2 ? 0 : 0,
-                                    height: index === 5 && !isSmall ? 450 : 214
+                                    height: index === 5 && !isSmall ? 450 : index === 5 && isSmall ? 214 : isSmall ? 184 : 360,
                                 }}
                                      className='project-item-photo-outline'>
                                     <img src={p.src} alt={p.title}/>

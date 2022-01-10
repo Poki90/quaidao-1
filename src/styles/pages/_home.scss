@@ -348,7 +348,7 @@
           width: 70%;
           margin-top: 50px;
           @media (max-width: 600px) {
-            padding-bottom: 50px;
+            padding-bottom: 0px;
             padding-left: 0;
             width: 100%;
           }
@@ -641,7 +641,7 @@
     width: 100%;
     background: url("../../assets/images/gateway-DeFi-background.png") #F4F7FD no-repeat;
     display: flex;
-    height: 546px !important;
+    height: 546px;
     background-size: cover !important;
     z-index: 0;
     padding: 15px;
@@ -666,10 +666,8 @@
     }
 
     @media (max-width: 600px) {
-      background: url("../../assets/images/bg-gateway-DeFi.png");
-      height: 802px;
-      background-position: center;
-      background-repeat: no-repeat;
+      height: 800px !important;
+      background: url("../../assets/images/bg-gateway-DeFi.png") no-repeat center;
       background-size: cover;
       position: relative;
       .bitcoin-chain {
@@ -679,7 +677,7 @@
         justify-content: center;
         left: 0;
         right: 0;
-        top: 100px;
+        top: 50px;
         bottom: 0;
         padding-bottom: 21px;
         margin: 14px;
