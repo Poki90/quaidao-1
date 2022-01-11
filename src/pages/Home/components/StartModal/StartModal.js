@@ -11,7 +11,7 @@ import {useMedia} from "hooks";
 
 const StartModal = ({isShowing,
                         toggle}) => {
-    const isSmall = useMedia('(max-width: 800px)');
+    const isSmall = useMedia('(max-width: 600px)');
     return (
         <Modal
             isShowing={isShowing}

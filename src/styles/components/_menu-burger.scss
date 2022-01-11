@@ -23,33 +23,31 @@
   top: 60px;
   @media (min-width: 1410px) {
     display: none;
-
   }
   @media (max-width: 1410px) {
+    right: 1%;
+    top: 44px;
+    display: block;
+  }
+  @media (max-width: 600px) {
     right: 5%;
     top: 44px;
     display: block;
-
   }
 
   .bm-burger-bars {
     height: 10% !important;
     opacity: 0.9;
-    @media (min-width: 600px) {
-      width: 50% !important;
+    background-color: white;
+    width: 100% !important;
+    @media (min-width: 1200px) {
+      background-color: #4A38AE !important;
+    }
+    @media (max-width: 600px) {
+      background-color: #fff !important;
     }
   }
 
-}
-
-.bm-burger-bars {
-  background: #FFFFFF;
-  @media (max-width: 1410px) {
-    background-color: #4A38AE;
-  }
-  @media (max-width: 800px) {
-    background-color: #FFFFFF;
-  }
 }
 
 

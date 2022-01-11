@@ -6,7 +6,7 @@ import {useMedia} from "hooks";
 import topImage from 'assets/images/main-top-section-image.png'
 import topImageMobile from 'assets/images/main-figure-mob.png'
 const TopSection = ({openModal}) => {
-    const isDesktop = useMedia('(max-width: 699px)');
+    const isDesktop = useMedia('(max-width: 600px)');
 
 
     return (

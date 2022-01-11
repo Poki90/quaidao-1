@@ -48,7 +48,6 @@ const partnersMob2 = [
     },
 
 
-
 ]
 const partnersMob3 = [
     {
@@ -107,7 +106,7 @@ const partnersDesk2 = [
 
 
 const PartnersSection = () => {
-    const isSmall = useMedia('(max-width: 699px)');
+    const isSmall = useMedia('(max-width: 1040px)');
     const isMobileScreen = useMedia('(max-width: 450px)');
 
     return (
@@ -183,13 +182,13 @@ const PartnersSection = () => {
                                                 <div key={index} className='container__list--item'>
                                                     <div className='container__list--item__hover'>
                                                         <img className='photo' src={partner.photo} alt='none'/>
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                            </div>
-                                        </Slide>
-                                    </>
-                                }
+                                                    </div>
+                                                </div>
+                                            ))}
+                                    </div>
+                                </Slide>
+                            </>
+                        }
 
                     </Slider>
                     <div className="options">

@@ -105,7 +105,7 @@ const teamMembersMob2 = [
 ];
 
 const TeamSection = () => {
-    const isSmall = useMedia('(max-width: 450px)');
+    const isSmall = useMedia('(max-width: 1040px)');
     const isMobileScreen = useMedia('(max-width: 350px)');
     return (
         <div className="team-section">

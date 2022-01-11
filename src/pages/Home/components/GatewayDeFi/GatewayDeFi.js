@@ -7,15 +7,15 @@ import {ReactSVG} from "react-svg";
 import {useMedia} from "hooks";
 
 const GatewayDeFi = () => {
-    const isSmall = useMedia('(max-width: 699px)');
+    const isSmall = useMedia('(max-width: 600px)');
 
     return (
         <div className='gateway-DeFi'>
             <div className='bitcoin-chain'>
                 <object
                     type="image/svg+xml"
-                    height="70"
-                    width="150"
+                    height="auto"
+                    width="auto"
                     data={!isSmall ? bitook : bitookMobile} >
                 </object>
             </div>
