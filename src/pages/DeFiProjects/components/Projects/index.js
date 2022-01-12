@@ -46,7 +46,9 @@ const projects = [
 ]
 
 const Projects = () => {
-    const isSmall = useMedia('(max-width: 600px)');
+    const isDesktop = useMedia('(min-width: 1210px)');
+    const isTablet = useMedia('(min-width: 600px) and (max-width: 1200px)');
+
 
     return (
         <>
@@ -55,30 +57,34 @@ const Projects = () => {
                     <div className="projects__heading__title">PROJECTS</div>
                 </div>
             </div>
-            {projects.map((p, index) => (
-                <div style={{backgroundColor: index % 2 ? '#fff' : ''}} className='project'>
-                    <div className="container">
-                        <div className="projects-list">
-                            <div className="projects-list--item">
-                                <div style={{order: !isSmall && index % 2 ? 1 : 0}} className='project-item-info'>
-                                    <div className='project-item-title'>{p.title}</div>
-                                    <div className='project-item-describe'>
-                                        {p.description}                                                    </div>
-                                    <button className='project-item-btn'><p>Explore</p></button>
-                                </div>
-                                <div style={{
-                                    order: !isSmall && index % 2 ? 0 : 0,
-                                    height: index === 5 && !isSmall ? 450 : index === 5 && isSmall ? 214 : isSmall ? 184 : 360,
-                                }}
-                                     className='project-item-photo-outline'>
-                                    <img src={p.src} alt={p.title}/>
+            <div className='projects-container'>
+                {projects.map((p, index) => (
+                    <div
+                        style={{backgroundColor: (isTablet && index === 2 || index === 3) ? '#fff' : (!isTablet && index % 2) ? '#fff' : ""}}
+                        className='project'>
+                        <div className="container">
+                            <div className="projects-list">
+                                <div className="projects-list--item">
+                                    <div style={{order: !isTablet && index % 2 ? 1 : 0}} className='project-item-info'>
+                                        <div className='project-item-title'>{p.title}</div>
+                                        <div className='project-item-describe'>
+                                            {p.description}                                                    </div>
+                                        <button className='project-item-btn'><p>Explore</p></button>
+                                    </div>
+                                    <div style={{
+                                        order: !isTablet && index % 2 ? 0 : 0,
+                                        height: index === 5 && !isTablet ? 450 : index === 5 && isTablet ? 214 : isTablet ? 184 : 360,
+                                    }}
+                                         className='project-item-photo-outline'>
+                                        <img src={p.src} alt={p.title}/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            ))}
-            <div style={{height: !isSmall ? 150 : 50}}/>
+                ))}
+            </div>
+            <div style={{height: !isTablet ? 150 : 50}}/>
         </>
     );
 }

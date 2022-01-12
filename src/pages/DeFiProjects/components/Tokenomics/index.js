@@ -52,7 +52,7 @@ const tokenomics = [
 ]
 
 const Tokenomics = () => {
-    const isSmall = useMedia('(max-width: 600px)');
+    const isSmall = useMedia('(max-width: 800px)');
     console.log('isSmall Tokenomics', isSmall);
     return (
         <div className="tokenomics">

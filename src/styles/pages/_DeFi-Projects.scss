@@ -85,12 +85,13 @@
     flex-direction: column;
     height: 790px;
     background: url("../../assets/images/background-defi-top.png");
-    @media (max-width: 600px) {
-      background: url("../../assets/images/background-defi-top-mob.png") no-repeat top;
+    @media (max-width: 800px) {
       height: 100%;
       background-size: cover;
       padding: 65px 15px;
-
+    }
+    @media (max-width: 450px) {
+      background: url("../../assets/images/background-defi-top-mob.png") no-repeat top;
     }
 
     &__heading {
@@ -107,7 +108,7 @@
         line-height: 57px;
         color: #005BBC;
         padding-bottom: 20px;
-        @media (max-width: 600px) {
+        @media (max-width: 800px) {
           font-size: 36px;
           line-height: 43px;
         }
@@ -123,7 +124,7 @@
         line-height: 36px;
         color: #000000;
         padding-bottom: 40px;
-        @media (max-width: 600px) {
+        @media (max-width: 800px) {
           font-size: 18px;
           line-height: 21px;
           padding-bottom: 15%;
@@ -136,7 +137,7 @@
           font-size: 30px;
           line-height: 36px;
           color: #0024E5;
-          @media (max-width: 600px) {
+          @media (max-width: 800px) {
             font-size: 18px;
             line-height: 21px;
           }
@@ -146,7 +147,7 @@
 
     .container {
       gap: 60px;
-      @media (max-width: 600px) {
+      @media (max-width: 800px) {
         flex-direction: column;
         gap: 28px;
       }
@@ -157,7 +158,7 @@
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
-        @media (max-width: 600px) {
+        @media (max-width: 800px) {
           gap: 25px;
         }
 
@@ -212,7 +213,7 @@
           width: 100%;
           gap: 19px;
           flex-direction: row-reverse;
-          @media (max-width: 600px) {
+          @media (max-width: 800px) {
             align-items: center;
           }
 
@@ -228,7 +229,7 @@
               text-align: left;
               max-width: 300px;
               height: auto;
-              @media (max-width: 600px) {
+              @media (max-width: 800px) {
                 font-size: 16px;
                 line-height: 19px;
               }
@@ -242,7 +243,7 @@
               font-size: 20px;
               line-height: 24px;
               color: #005BBC;
-              @media (max-width: 600px) {
+              @media (max-width: 800px) {
                 font-size: 16px;
                 line-height: 19px;
               }
@@ -269,7 +270,10 @@
         background: url("../../assets/images/Tokenomics.png") no-repeat center;
         background-size: contain;
         padding-top: 34%;
-        @media (max-width: 600px) {
+        @media (max-width: 800px) {
+          padding-top: 50%;
+        }
+        @media (max-width: 400px) {
           padding-top: 100%;
         }
       }
@@ -284,10 +288,14 @@
     flex-direction: column;
     height: 81.89944134078212vh;
     background: url("../../assets/images/QUAI KEY METRICS-bg.png") bottom no-repeat;
-    @media (max-width: 600px) {
-      background: url("../../assets/images/QUAI KEY METRICS-bg mob.png") bottom no-repeat;
+    @media (max-width: 1202px) {
       height: auto;
       padding: 50px 0 140px 0;
+    }
+    @media (max-width: 400px) {
+      height: auto;
+      background: url("../../assets/images/QUAI KEY METRICS-bg mob.png") bottom no-repeat;
+
     }
 
     &__heading {
@@ -304,7 +312,7 @@
         line-height: 57px;
         color: #005BBC;
         padding-bottom: 60px;
-        @media (max-width: 600px) {
+        @media (max-width: 1202px) {
           font-size: 36px;
           line-height: 43px;
         }
@@ -313,7 +321,7 @@
     }
 
     .container {
-      @media (max-width: 600px) {
+      @media (max-width: 1202px) {
         flex-direction: column;
         justify-content: center;
       }
@@ -323,7 +331,7 @@
         align-items: center;
         justify-content: space-evenly;
         gap: 45px;
-        @media (max-width: 600px) {
+        @media (max-width: 1202px) {
           flex-direction: column;
           justify-content: center;
           gap: 102px;
@@ -441,7 +449,7 @@
         line-height: 57px;
         color: #005BBC;
         padding-bottom: 20px;
-        @media (max-width: 600px) {
+        @media (max-width: 1210px) {
           font-size: 36px;
           line-height: 43px;
         }
@@ -449,47 +457,61 @@
     }
   }
 
-  .project {
-    padding: 50px 0;
+  .projects-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    min-height: max-content;
-    background-color: #F4F7FD;
+    justify-content: center;
+    width: 100%;
+    @media (max-width: 1210px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 600px) {
+      display: flex;
+    }
 
-    .container {
-      gap: 60px;
-      @media (max-width: 600px) {
-        padding: 0 15px !important;
-      }
+    .project {
+      padding: 50px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100%;
+      background-color: #F4F7FD;
 
-      .projects-list {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+      .container {
+        gap: 60px;
+        @media (max-width: 1210px) {
+          padding: 0 15px !important;
+        }
 
-        .projects-list--item {
+        .projects-list {
           width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          .projects-list--item {
+            width: 100%;
           display: flex;
           flex-direction: row;
           gap: 60px;
-          @media (max-width: 600px) {
-            flex-direction: column;
-            gap: 24px;
-          }
+            @media (max-width: 1210px) {
+              flex-direction: column;
+              gap: 24px;
+            }
 
           .project-item-info {
             width: 40%;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
-            @media (max-width: 600px) {
-              order: 1!important;
+            @media (max-width: 1210px) {
+              order: 1 !important;
               width: 100%;
             }
+
             .project-item-title {
               font-family: Rubik, sans-serif;
               font-style: normal;
@@ -583,19 +605,20 @@
             position: relative;
             left: 10px;
 
-            @media (max-width: 600px) {
+            @media (max-width: 1210px) {
               width: 98%;
               height: 182px;
             }
             img {
               width: 100%;
-              height: 100%!important;
+              height: 100% !important;
+              max-width: 700px;
               position: absolute;
               top: 0;
               left: 0;
               right: 0;
               bottom: 0;
-              @media (max-width: 600px) {
+              @media (max-width: 1210px) {
                 width: 100%;
                 top: 10px;
               }
@@ -603,13 +626,15 @@
           }
           .project-item-photo-outline {
             height: 450px;
-            @media (max-width: 600px) {
+            @media (max-width: 1210px) {
               height: 214px;
             }
           }
-        }
+          }
 
+        }
       }
+
     }
 
   }
