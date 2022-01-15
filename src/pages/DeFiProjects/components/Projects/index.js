@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import pQUAI from "assets/images/defi/QUAI Invest.png";
 import pMeDIA from "assets/images/defi/MeDIA eYe NFT Portal.png";
 import pMetaverse from "assets/images/defi/Metaverse Comics.png";
@@ -46,10 +46,12 @@ const projects = [
 ]
 
 const Projects = () => {
-    const isDesktop = useMedia('(min-width: 1210px)');
     const isTablet = useMedia('(min-width: 600px) and (max-width: 1200px)');
-
-
+    const isDesktop = useMedia('(max-width: 1200px)');
+    useEffect(() => {
+        console.log(refImg?.current?.offsetWidth);
+    })
+    const refImg = useRef(null);
     return (
         <>
             <div className='projects'>
@@ -60,6 +62,7 @@ const Projects = () => {
             <div className='projects-container'>
                 {projects.map((p, index) => (
                     <div
+                        key={p.title}
                         style={{backgroundColor: (isTablet && index === 2 || index === 3) ? '#fff' : (!isTablet && index % 2) ? '#fff' : ""}}
                         className='project'>
                         <div className="container">
@@ -71,12 +74,17 @@ const Projects = () => {
                                             {p.description}                                                    </div>
                                         <button className='project-item-btn'><p>Explore</p></button>
                                     </div>
-                                    <div style={{
-                                        order: !isTablet && index % 2 ? 0 : 0,
-                                        height: index === 5 && !isTablet ? 450 : index === 5 && isTablet ? 214 : isTablet ? 184 : 360,
-                                    }}
-                                         className='project-item-photo-outline'>
-                                        <img src={p.src} alt={p.title}/>
+                                    <div
+                                        ref={refImg}
+                                        style={{
+                                            order: !isTablet && index % 2 ? 0 : 0,
+                                            height: index === 5 && refImg?.current?.offsetWidth < 600 && 214 || index === 5 && refImg?.current?.offsetWidth > 600 && 450,
+                                            maxWidth: refImg?.current?.offsetWidth < 600 && 345
+
+                                        }}
+                                        className='project-item-photo-outline'>
+                                        <img
+                                            src={p.src} alt={p.title}/>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +92,7 @@ const Projects = () => {
                     </div>
                 ))}
             </div>
-            <div style={{height: !isTablet ? 150 : 50}}/>
+            <div style={{height: !isTablet ? 150 : 50, backgroundColor: isDesktop && "#F4F7FD"}}/>
         </>
     );
 }

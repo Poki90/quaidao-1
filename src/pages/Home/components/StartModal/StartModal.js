@@ -20,8 +20,6 @@ const StartModal = ({isShowing,
             modalStyles={{
                 width: isSmall ? '90%' : '70%', minHeight: isSmall ? '90%' : '60%', overflow: 'hidden',
                 maxWidth: 1100,
-                height:'max-content',
-                maxHeight: 550,
                 border: "2px solid #005BBC",
                 boxSizing: 'border-box',
                 boxShadow: '0px 0px 20px #000AFF',

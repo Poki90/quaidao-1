@@ -2,17 +2,17 @@ import React from 'react';
 import RenderResponsiveBlocks from "components/RenderResponsiveBlocks";
 import Header from "components/layouts/Header";
 import UiButton from "components/UiButton";
-import {useMobileDetect} from "hooks";
+import {useMedia} from "hooks";
 
 const FirstSection = ({toggleModal}) => {
-    const {isDesktop} = useMobileDetect();
+    const isDesktop = useMedia('(max-width: 800px)');
 
     return(
         <div className="top-section">
             <RenderResponsiveBlocks
                 leftChildren={<div className="top-section__left-part">
                     <Header/>
-                    {!isDesktop &&
+                    {isDesktop &&
                     <div className="staking-button" style={{zIndex: 0}}>
                         <UiButton priority='white' type='button' onclick={toggleModal}>
                             <p>Cohort farming</p>
@@ -22,7 +22,7 @@ const FirstSection = ({toggleModal}) => {
                 rightChildren={
                     <div className="top-section__right-part">
                         <div className="top-section__right-part__heading-button">
-                            {isDesktop &&
+                            {!isDesktop &&
                             <UiButton priority='primary' type='button'
                                       onclick={toggleModal}><p>Cohort
                                 farming</p>

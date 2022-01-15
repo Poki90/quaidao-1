@@ -4,11 +4,8 @@ import Header from "components/layouts/Header";
 import UiButton from "components/UiButton";
 import {useMedia} from "hooks";
 import topImage from 'assets/images/main-top-section-image.png'
-import topImageMobile from 'assets/images/main-figure-mob.png'
 const TopSection = ({openModal}) => {
-    const isDesktop = useMedia('(max-width: 600px)');
-
-
+    const isDesktop = useMedia('(max-width: 435px)');
     return (
         <div className="top-section">
             <RenderResponsiveBlocks

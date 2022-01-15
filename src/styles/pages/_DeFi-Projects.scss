@@ -1,4 +1,17 @@
 .defi-page {
+  @media(min-width: 800px) {
+    div{
+      div{
+        .bm-burger-button{
+          span{
+            .bm-burger-bars{
+              background-color: #4A38AE !important;
+            }
+          }
+        }
+      }
+    }
+  }
 
   .container {
     margin: 0 auto;
@@ -14,22 +27,23 @@
     filter: drop-shadow(0px 1px 31px rgba(0, 0, 0, 0.58));
     .render-responsive-blocks {
       background: url("../../assets/images/header-back.png") transparent no-repeat;
-      @media(max-width: 600px) {
+      @media(max-width: 800px) {
         background: none;
       }
 
       .left {
         background-size: contain;
         background: url("../../assets/images/header mob-sidebar.png") no-repeat center;
-        @media(max-width: 600px) {
+        @media(max-width: 800px) {
           background-size: cover;
+            width: 100% !important
         }
       }
 
       .right {
         background-size: contain !important;
         background: #F4F7FD;
-        @media(max-width: 600px) {
+        @media(max-width: 800px) {
           display: none;
         }
       }
@@ -42,13 +56,14 @@
       align-items: center;
       flex-direction: column;
       padding: 0 52px 0 102px;
-      @media(max-width: 600px) {
+      @media(max-width: 800px) {
         padding: 0 12px;
         height: 238px;
+        width: 100% !important
       }
 
       .staking-button {
-        @media(max-width: 600px) {
+        @media(max-width: 800px) {
           padding-top: 20px;
         }
       }
@@ -63,7 +78,7 @@
       flex-direction: column;
       position: relative;
       z-index: 1;
-      @media (max-width: 600px) {
+      @media (max-width: 800px) {
         margin-top: 132px;
       }
 
@@ -290,7 +305,7 @@
     background: url("../../assets/images/QUAI KEY METRICS-bg.png") bottom no-repeat;
     @media (max-width: 1202px) {
       height: auto;
-      padding: 50px 0 140px 0;
+      padding: 50px 8px 140px 8px;
     }
     @media (max-width: 400px) {
       height: auto;
@@ -338,8 +353,8 @@
         }
 
         &__item-outline {
-          width: 370px;
-          height: 329px;
+          min-width: 370px;
+          min-height: 329px;
           border: 1px dashed #3A6BFF;
           box-sizing: border-box;
           border-radius: 6px;
@@ -348,16 +363,26 @@
           justify-content: center;
           position: relative;
           z-index: 2;
-
+          @media (max-width: 1202px) {
+            min-width: 300px;
+            min-height: 330px;
+          }
           .back-square {
             position: absolute;
-            width: 296px;
-            height: 70px;
+            min-width: 296px;
+            min-height: 70px;
             bottom: -45px;
             left: 35px;
             z-index: 0;
             background: #C4D2FF;
             border-radius: 6px;
+            @media (max-width: 1202px) {
+              min-width: 180px;
+              min-height: 20px;
+              bottom: -17px;
+              left: 74px;
+              z-index: 0;
+            }
           }
 
           &--metric {
@@ -369,8 +394,8 @@
             bottom: 0;
             left: 10px;
             right: 0;
-            width: 352px;
-            height: 343px;
+            min-width: 352px;
+            min-height: 343px;
             background: #F4F7FD;
             box-shadow: -4px 8px 11px rgba(0, 0, 0, 0.43), inset 0px 5px 5px #FFFFFF;
             border-radius: 6px;
@@ -378,7 +403,10 @@
             align-items: center;
             justify-content: space-around;
             flex-direction: column;
-
+            @media (max-width: 1202px) {
+              min-width: 297px;
+              min-height: 320px;
+            }
             .metric-logo {
 
             }
@@ -625,9 +653,9 @@
             }
           }
           .project-item-photo-outline {
-            height: 450px;
+            height: 360px;
             @media (max-width: 1210px) {
-              height: 214px;
+              height: 182px;
             }
           }
           }

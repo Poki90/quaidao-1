@@ -38,6 +38,7 @@
   padding: 20px;
   @media(max-width: 600px) {
     margin: 1%;
+    min-height: 98% !important;
   }
   &--modal-body {
     &__header {
@@ -145,7 +146,6 @@
       margin-top: 30px;
     }
     .item-border {
-
       height: 107px;
       width: 80%;
       border: 1px solid #005BBC;
