@@ -170,20 +170,13 @@
           gap: 24px;
           min-width: 200px;
           @media(max-width: 665px) {
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-start;
             white-space: nowrap;
-            gap: 74px;
           }
 
           > div {
             white-space: nowrap;
 
             @media(max-width: 665px) {
-              flex-direction: column;
-              justify-content: space-between;
-              align-items: flex-start;
               white-space: nowrap;
               height: 4.75rem;
             }
@@ -196,7 +189,7 @@
             .number {
               font-size: 3rem;
               @media(max-width: 1100px) {
-                font-size: 2rem;
+                font-size: 1.5rem;
               }
             }
 
@@ -204,7 +197,7 @@
               font-family: Rubik, "Open Sans", sans-serif;
               font-style: normal;
               font-weight: 500;
-              font-size: 24px;
+              font-size: 15px;
               line-height: 28px;
               color: #FFFFFF;
             }
@@ -213,7 +206,7 @@
               font-family: Rubik, "Open Sans", sans-serif;
               font-style: normal;
               font-weight: 500;
-              font-size: 24px;
+              font-size: 19px;
               line-height: 28px;
               color: #FFFFFF;
 
